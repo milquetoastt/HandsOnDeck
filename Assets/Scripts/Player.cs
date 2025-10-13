@@ -28,15 +28,16 @@ public class Player : MonoBehaviour
     
     public IEnumerator RespawnPlayer() //StartCoroutine(RespawnPlayer());
     {
+        Debug.Log("Respawning");
         yield return new WaitForSeconds(waitTime);
-        playerSprite.color = new Color(255, 0, 0, 255);
+        playerSprite.color = new Color(1, 0, 0, 1);
     }
 
     public void Die()
     {
-        
+        Debug.Log("YouDied");
         //also disable button press? Probably will just have to check if other player near cannon
-        playerSprite.color = new Color(255,0,0,80);//make player a ghost? 
+        playerSprite.color = new Color(1,0,0,0.3f);//make player a ghost? 
 
     }
 }

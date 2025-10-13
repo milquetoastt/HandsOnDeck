@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCannonBall : MonoBehaviour
+public class RespawnPoint : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,13 +15,14 @@ public class EnemyCannonBall : MonoBehaviour
     {
         
     }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Collide with CannonBall");
+            Debug.Log("Collide with Respawn");
             var player = collision.GetComponent<Player>();
-            player.Die();
+            StartCoroutine(player.RespawnPlayer());
         }
     }
 }
