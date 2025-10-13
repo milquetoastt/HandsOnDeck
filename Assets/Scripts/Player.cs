@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
         Debug.Log("Respawning");
         yield return new WaitForSeconds(waitTime);
         playerSprite.color = new Color(1, 0, 0, 1);
+        alive = true;
     }
 
     public void Die()
