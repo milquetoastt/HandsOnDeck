@@ -17,10 +17,8 @@ public class EnemyCannonBall : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("collided");
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Collide with CannonBall");
             var player = collision.GetComponent<Player>();
             player.Die();
         }

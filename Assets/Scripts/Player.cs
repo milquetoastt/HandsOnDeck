@@ -8,7 +8,6 @@ public class Player : MonoBehaviour
     public bool alive;
     private SpriteRenderer playerSprite;
 
-    public float waitTime; 
     void Start()
     {
         alive = true; 
@@ -26,10 +25,9 @@ public class Player : MonoBehaviour
         }
     }
     
-    public IEnumerator RespawnPlayer() //StartCoroutine(RespawnPlayer());
+    public void RespawnPlayer() //StartCoroutine(RespawnPlayer());
     {
-        Debug.Log("Respawning");
-        yield return new WaitForSeconds(waitTime);
+        Debug.Log("Player Respawn");
         playerSprite.color = new Color(1, 0, 0, 1);
         alive = true;
     }
