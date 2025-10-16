@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyCannonBall : MonoBehaviour
 {
+    public GameObject deathBox;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +23,14 @@ public class EnemyCannonBall : MonoBehaviour
             var player = collision.GetComponent<Player>();
             player.Die();
         }
+
+        if (collision.CompareTag("Ground"))
+        {
+            
+            Vector3 coords = transform.position;
+            Debug.Log("enemy cannonball hit ground at " + coords);
+            Instantiate(deathBox, coords, Quaternion.identity);
+        }
+
     }
 }
