@@ -5,10 +5,11 @@ using UnityEngine;
 public class EnemyCannonBall : MonoBehaviour
 {
     public GameObject deathBox;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(DestroyBall());
     }
 
     // Update is called once per frame
@@ -32,5 +33,11 @@ public class EnemyCannonBall : MonoBehaviour
             Instantiate(deathBox, coords, Quaternion.identity);
         }
 
+    }
+
+    private IEnumerator DestroyBall()
+    {
+        yield return new WaitForSeconds(10);
+        Destroy(gameObject);
     }
 }

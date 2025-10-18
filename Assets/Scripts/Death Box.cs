@@ -14,7 +14,7 @@ public class DeathBox : MonoBehaviour
     private IEnumerator FixInSeconds()
     {
         yield return new WaitForSeconds(fixTimer);
-        Destroy(this);
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter(Collision collision)
