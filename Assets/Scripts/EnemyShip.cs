@@ -11,6 +11,8 @@ public class EnemyShip : MonoBehaviour
     public List<Vector3> laneStartCoords = new List<Vector3>();
     public List<Transform> laneTargets = new List<Transform>();
     public float fireSpeed = 10f;
+
+    public GameObject CannonFire;
     //public Transform target;
 
     private Coroutine enemyFireCoroutine;
@@ -46,11 +48,21 @@ public class EnemyShip : MonoBehaviour
     );
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        PlayerShip playership = other.GetComponent<PlayerShip>();
+        if (playership != null)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     private IEnumerator EnemyFireCoroutine()
     {
         //this will repeat forever
         Debug.Log("waitin");
         yield return new WaitForSeconds(fireSpeed);
+        Instantiate(CannonFire);
         Debug.Log("EnemyShip fired in lane " + lane);
         StartCoroutine(EnemyFireCoroutine());
     }

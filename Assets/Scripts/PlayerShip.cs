@@ -30,5 +30,7 @@ public class PlayerShip : MonoBehaviour
             Debug.Log("EnemyShip hit player ship! Minus one health for a total of :" + health + " health");
             
         }
+
+        
     }
 }
