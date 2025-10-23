@@ -240,7 +240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4592536597086601352, guid: 7606c74bd94fe474f86e1a2caa4bc836, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5010211936177937335, guid: 7606c74bd94fe474f86e1a2caa4bc836, type: 3}
       propertyPath: m_LocalPosition.x
@@ -546,7 +546,7 @@ Transform:
   m_GameObject: {fileID: 650196974}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: -6}
+  m_LocalPosition: {x: 0, y: 0.13, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1417,7 +1417,7 @@ Transform:
   m_GameObject: {fileID: 1532858187}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.5, y: -1, z: -6}
+  m_LocalPosition: {x: 3.5, y: 0.13, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1698,7 +1698,7 @@ Transform:
   m_GameObject: {fileID: 2132087333}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5, y: -1, z: -6}
+  m_LocalPosition: {x: -3.5, y: 0.13, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1887,7 +1887,7 @@ PrefabInstance:
     - target: {fileID: 8250770967645183061, guid: 00c97a78612940243a58281c5bfd277d, type: 3}
       propertyPath: projectile
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4592536597086601352, guid: 7606c74bd94fe474f86e1a2caa4bc836, type: 3}
     - target: {fileID: 8544236376333292028, guid: 00c97a78612940243a58281c5bfd277d, type: 3}
       propertyPath: m_Name
       value: Cannon

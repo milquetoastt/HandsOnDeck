@@ -48,6 +48,15 @@ public class EnemyShip : MonoBehaviour
     );
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        PlayerShip playership = other.GetComponent<PlayerShip>();
+        if (playership != null)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     private IEnumerator EnemyFireCoroutine()
     {
         //this will repeat forever
