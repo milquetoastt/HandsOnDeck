@@ -19,7 +19,7 @@ public class DeathBox : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Death box hit something");
+        //Debug.Log("Death box hit something");
         Player player = collision.gameObject.GetComponent<Player>();
         if (player != null)
         {

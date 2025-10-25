@@ -25,8 +25,8 @@ Transform:
   m_GameObject: {fileID: 5393165010888532512}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.485, y: 0.278, z: -0.001}
-  m_LocalScale: {x: 0.33333325, y: 0.33333334, z: 0.33333325}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4720925903158585130}
@@ -43,9 +43,10 @@ GameObject:
   - component: {fileID: 4829245880686791399}
   - component: {fileID: 8250770967645183061}
   - component: {fileID: 2483532118374656094}
+  - component: {fileID: 8085944230165978769}
   m_Layer: 0
   m_Name: Cannon
-  m_TagString: Untagged
+  m_TagString: Cannon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +61,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 1.7021247, y: 1, z: -0.020749845}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5767258611397480094}
@@ -86,10 +87,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 0.26920727
+  m_Height: 1.0000001
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.08725268, y: 0, z: -0.029721785}
 --- !u!114 &8250770967645183061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,9 +103,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a9483afdb46b3a4d86345c3dc36b89d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 8544236376333292028}
+  projectile: {fileID: 4592536597086601352, guid: 7606c74bd94fe474f86e1a2caa4bc836, type: 3}
   firepoint: {fileID: 4811810518163281542}
-  launchVelocity: 700
+  launchVelocity: 25
+  canFire: 0
 --- !u!114 &2483532118374656094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,9 +119,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d46d40f5f84f394a9358ce1ad5de5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectName: Cannon
+  ObjectName: cannon
   PositionOffset: {x: 0, y: 0, z: 0}
-  RotationOffset: {x: 0, y: 0, z: 0}
+  RotationOffset: {x: 0, y: 90, z: 90}
+--- !u!114 &8085944230165978769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8544236376333292028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6928c462ba71be45b4354af697f8a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  preferHighArc: 0
 --- !u!1001 &6306115195334142325
 PrefabInstance:
   m_ObjectHideFlags: 0

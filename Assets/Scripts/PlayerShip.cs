@@ -22,7 +22,7 @@ public class PlayerShip : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Player ship hit something");
+        //Debug.Log("Player ship hit something");
         EnemyShip enemyShip = other.GetComponent<EnemyShip>();
         if (enemyShip != null)
         {
