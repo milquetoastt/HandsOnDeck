@@ -17,7 +17,7 @@ public class EnemyCannonBall : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider collision)
+    private void OnTriggerEnter(Collider collision) 
     {
         if (collision.CompareTag("Player"))
         {
@@ -29,7 +29,7 @@ public class EnemyCannonBall : MonoBehaviour
         {
             
             Vector3 coords = transform.position;
-            Debug.Log("enemy cannonball hit ground at " + coords);
+            //Debug.Log("enemy cannonball hit ground at " + coords);
             Instantiate(deathBox, coords, Quaternion.identity);
         }
 

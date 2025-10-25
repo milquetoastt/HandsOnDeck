@@ -9,7 +9,7 @@ public class EnemyShip : MonoBehaviour
     public float speed = 1f;
     public int lane;
     public List<Vector3> laneStartCoords = new List<Vector3>();
-    public List<Transform> laneTargets = new List<Transform>();
+    public List<Vector3> laneTargets = new List<Vector3>();
     public float fireSpeed = 10f;
 
     public GameObject CannonFire;
@@ -24,7 +24,7 @@ public class EnemyShip : MonoBehaviour
     }
     void Start()
     {
-        Debug.Log("This ship will spawn in lane " + lane);
+        //Debug.Log("This ship will spawn in lane " + lane);
         StartCoroutine(EnemyFireCoroutine());
     }
 
@@ -43,16 +43,26 @@ public class EnemyShip : MonoBehaviour
         //ship moves down a lane
         transform.position = Vector3.MoveTowards(
         transform.position,
-        laneTargets[lane-1].position,
+        laneTargets[lane-1],
         speed * Time.deltaTime
     );
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("ENemey ship hit something");
         PlayerShip playership = other.GetComponent<PlayerShip>();
         if (playership != null)
         {
+            RankChange();
+            Destroy(this.gameObject);
+        }
+
+        EnemyCannonBall cannonBall = other.GetComponent<EnemyCannonBall>();
+        if(cannonBall != null)
+        {
+            Destroy(other.gameObject);
+            RankChange();
             Destroy(this.gameObject);
         }
     }
@@ -60,10 +70,17 @@ public class EnemyShip : MonoBehaviour
     private IEnumerator EnemyFireCoroutine()
     {
         //this will repeat forever
-        Debug.Log("waitin");
+        //Debug.Log("waitin");
         yield return new WaitForSeconds(fireSpeed);
         Instantiate(CannonFire);
-        Debug.Log("EnemyShip fired in lane " + lane);
+        //Debug.Log("EnemyShip fired in lane " + lane);
         StartCoroutine(EnemyFireCoroutine());
+    }
+    
+    private void RankChange()
+    {
+        if (lane == 1) { GameManager.Instance.ShiftLane1(); }
+        if (lane == 2) { GameManager.Instance.ShiftLane2(); }
+        if (lane == 3) { GameManager.Instance.ShiftLane3(); }
     }
 }
