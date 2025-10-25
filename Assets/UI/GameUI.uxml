@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/GameUI.uss?fileID=7433441132597879392&amp;guid=319b9f384f8ffa749898d0a47bee828a&amp;type=3#GameUI" />
+    <ui:VisualElement name="Game" style="flex-grow: 1;">
+        <ui:GroupBox name="TopBar" style="flex-direction: row;">
+            <ui:GroupBox name="HeartContainer" style="align-self: auto; background-image: url(&quot;project://database/Assets/UI/heart_container.png?fileID=2800000&amp;guid=67a1f8ed5e89c0640bfb36e19696956e&amp;type=3#heart_container&quot;); width: 652px; -unity-background-scale-mode: scale-to-fit; transform-origin: center; translate: -200px 0; flex-direction: row; padding-left: 250px; padding-right: 50px;">
+                <ui:VisualElement name="Heart1" class="heart" style="flex-grow: 1; justify-content: flex-start; align-self: center;" />
+                <ui:VisualElement name="Heart2" class="heart" style="flex-grow: 1; justify-content: flex-start; align-self: center;" />
+                <ui:VisualElement name="Heart3" class="heart" style="flex-grow: 1; justify-content: flex-start; align-self: center;" />
+            </ui:GroupBox>
+            <ui:GroupBox name="PointBox" style="flex-direction: row; -unity-text-align: upper-left; justify-content: center; align-self: auto; align-items: stretch; margin-left: -125px;">
+                <ui:Label text="9,999,999" name="PointText" class="pointText" />
+                <ui:Label text="pts" name="PointLabel" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/BaiJamjuree-Bold.ttf?fileID=12800000&amp;guid=2ef02eb529f35554c8fe4a57a4a7ba09&amp;type=3#BaiJamjuree-Bold&quot;); color: rgb(255, 255, 255); white-space: nowrap; justify-content: flex-start; align-items: auto; flex-direction: column; font-size: 45px; text-shadow: 0 5px 40px rgba(0, 0, 0, 0.35); -unity-text-outline-color: rgb(144, 153, 183); -unity-text-outline-width: 2px; -unity-text-align: lower-left;" />
+            </ui:GroupBox>
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>
