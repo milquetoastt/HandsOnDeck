@@ -17,7 +17,7 @@ public class DeathBox : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         //Debug.Log("Death box hit something");
         Player player = collision.gameObject.GetComponent<Player>();
