@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerShip : MonoBehaviour
 {
-    public int health = 3;
+    public int health = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,11 +26,16 @@ public class PlayerShip : MonoBehaviour
         EnemyShip enemyShip = other.GetComponent<EnemyShip>();
         if (enemyShip != null)
         {
-            health -= 1;
+            health -= 10;
             Debug.Log("EnemyShip hit player ship! Minus one health for a total of :" + health + " health");
             
         }
 
         
+    }
+
+    public void DamageShip()
+    {
+        health -= 1;
     }
 }

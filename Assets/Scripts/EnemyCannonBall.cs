@@ -27,10 +27,12 @@ public class EnemyCannonBall : MonoBehaviour
 
         if (collision.CompareTag("Ground"))
         {
-            
+            var Deck = collision.GetComponent<PlayerShip>();
             Vector3 coords = transform.position;
             //Debug.Log("enemy cannonball hit ground at " + coords);
             Instantiate(deathBox, coords, Quaternion.identity);
+
+            Deck.DamageShip();
         }
 
     }
