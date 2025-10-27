@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
     {
         Debug.Log("YouDied");
         //also disable button press? Probably will just have to check if other player near cannon
+        alive = false;
         playerSprite.color = new Color(1,0,0,0.3f);//make player a ghost? 
 
     }

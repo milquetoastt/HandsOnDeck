@@ -274,6 +274,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnPoint (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6489604599666155195, guid: 82cd9b1118a0f75498d5c8380e278de4, type: 3}
+      propertyPath: m_Size.y
+      value: 3.4220161
+      objectReference: {fileID: 0}
+    - target: {fileID: 6489604599666155195, guid: 82cd9b1118a0f75498d5c8380e278de4, type: 3}
+      propertyPath: m_Center.y
+      value: 1.2110078
+      objectReference: {fileID: 0}
     - target: {fileID: 8858285850913043218, guid: 82cd9b1118a0f75498d5c8380e278de4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -3179,6 +3187,18 @@ PrefabInstance:
     - target: {fileID: 250674117430767043, guid: 82cd9b1118a0f75498d5c8380e278de4, type: 3}
       propertyPath: m_Name
       value: RespawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 6489604599666155195, guid: 82cd9b1118a0f75498d5c8380e278de4, type: 3}
+      propertyPath: m_Size.y
+      value: 2.945985
+      objectReference: {fileID: 0}
+    - target: {fileID: 6489604599666155195, guid: 82cd9b1118a0f75498d5c8380e278de4, type: 3}
+      propertyPath: m_Center.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6489604599666155195, guid: 82cd9b1118a0f75498d5c8380e278de4, type: 3}
+      propertyPath: m_Center.y
+      value: 0.97299194
       objectReference: {fileID: 0}
     - target: {fileID: 8858285850913043218, guid: 82cd9b1118a0f75498d5c8380e278de4, type: 3}
       propertyPath: m_LocalPosition.x
