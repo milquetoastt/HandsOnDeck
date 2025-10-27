@@ -38,4 +38,9 @@ public class PlayerShip : MonoBehaviour
     {
         health -= 1;
     }
+
+    public int GetHealth()
+    {
+        return health;
+    }
 }
