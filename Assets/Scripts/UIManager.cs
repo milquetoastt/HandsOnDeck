@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviour
     int numHearts;
 
     public Sprite emptyHeart;
+
+    public GameObject loseScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,12 @@ public class UIManager : MonoBehaviour
         if (numHearts < 10 && deck.GetHealth() < 95) //added 95 to make it less quick
         {
             heart[numHearts].GetComponent<Image>().sprite = emptyHeart;
+        }
+
+        if (deck.GetHealth() == 0)
+        {
+            loseScreen.SetActive(true);
+            Time.timeScale = 0;
         }
 
     }
