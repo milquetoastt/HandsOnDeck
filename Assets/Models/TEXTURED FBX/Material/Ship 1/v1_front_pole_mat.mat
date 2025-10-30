@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: watcher_wood_mat
+  m_Name: v1_front_pole_mat
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -27,7 +27,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 2abfbdd1f2c05c345971b7f3b9aa943e, type: 3}
+        m_Texture: {fileID: 2800000, guid: e25f6200ef19f2242b10cb3b242ba2be, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -43,15 +43,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: f4ce6715b488f5549b8f00b591785d4e, type: 3}
+        m_Texture: {fileID: 2800000, guid: eded74d924ee6734c8547e9af5ab4fa7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: f4ce6715b488f5549b8f00b591785d4e, type: 3}
+        m_Texture: {fileID: 2800000, guid: eded74d924ee6734c8547e9af5ab4fa7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 322a12a92ac83414c9c626b0e286c3bf, type: 3}
+        m_Texture: {fileID: 2800000, guid: 81b11adb387d8f449a6e29df5b886611, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
