@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1175f3febca514a4184eb41fe46d53d4
+guid: da5975ef3d423d4409c20b4b56a990a0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Cube.064_Cube.127-0Mat
+      name: pCube4_Mesh-0Mat
+    second: {fileID: 2100000, guid: 3748cfa6e57de7e49951aa95459677d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube4_Mesh-1Mat
     second: {fileID: 2100000, guid: f5d0efc59fd49e14cb35224435f7cb67, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Cube.064_Cube.127-1Mat
-    second: {fileID: 2100000, guid: 748d8f95e04538447a3ee7c2c857e44e, type: 2}
+      name: pCube4_Mesh-2Mat
+    second: {fileID: 2100000, guid: f5d0efc59fd49e14cb35224435f7cb67, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
