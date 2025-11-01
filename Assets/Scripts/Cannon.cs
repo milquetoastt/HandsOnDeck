@@ -27,7 +27,7 @@ public class Cannon : MonoBehaviour
         //    cannonBall.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(launchVelocity, 0, 0));
         //}
 
-        if (Input.GetButtonDown("Fire1") && canFire)
+        if (Input.GetKeyDown(KeyCode.Space) && canFire)
         {
             GameObject cannonBall = Instantiate(projectile, firepoint.position, firepoint.rotation);
 
