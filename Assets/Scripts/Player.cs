@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        alive = true; 
+        alive = alive; 
         playerSprite = GetComponent<SpriteRenderer>();
     }
 
@@ -39,4 +39,5 @@ public class Player : MonoBehaviour
         playerSprite.color = new Color(1,0,0,0.3f);//make player a ghost? 
 
     }
+
 }
