@@ -17,22 +17,30 @@ public class EnemyCannonBall : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider collision) 
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Player"))
         {
             var player = collision.GetComponent<Player>();
-            player.Die();
+            if (player != null)
+            {
+                player.Die();
+            }
+
+            CleanUpBall();
         }
 
         if (collision.CompareTag("Ground"))
         {
-            var Deck = collision.GetComponent<PlayerShip>();
-            Vector3 coords = transform.position;
-            //Debug.Log("enemy cannonball hit ground at " + coords);
-            Instantiate(deathBox, coords, Quaternion.identity);
+            var deck = collision.GetComponent<PlayerShip>();
+            if (deck != null)
+            {
+                deck.DamageShip();
+            }
 
-            Deck.DamageShip();
+            Instantiate(deathBox, transform.position, Quaternion.identity);
+
+            CleanUpBall();
         }
 
     }
@@ -41,5 +49,11 @@ public class EnemyCannonBall : MonoBehaviour
     {
         yield return new WaitForSeconds(10);
         Destroy(gameObject);
+    }
+
+    private void CleanUpBall()
+    {
+        StopAllCoroutines();
+        DestroyBall();
     }
 }

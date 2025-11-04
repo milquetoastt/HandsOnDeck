@@ -29,7 +29,7 @@ public class Tutorial : MonoBehaviour
     }
 
     public TutorialStep currentStep = TutorialStep.Start;
-    // Start is called before the first frame update
+ 
     void Start()
     {
         player1.alive = false;//to make sure they are dead
@@ -41,9 +41,9 @@ public class Tutorial : MonoBehaviour
         arrow1.SetActive(true);
         arrow2.SetActive(true);
         shootArrow.SetActive(false);
-    }
 
-    // Update is called once per frame
+        GameManager.Instance.StopSpawning();
+    }
     void Update()
     {
 
@@ -53,20 +53,20 @@ public class Tutorial : MonoBehaviour
             if (player1.alive == true && player2.alive == true)
             {
                 NextStep();
-                Debug.Log("STEP ONE COMPLETE");
+                //Debug.Log("STEP ONE COMPLETE");
             }
         }
 
-        if (currentStep == TutorialStep.Shoot && Input.GetKeyDown(KeyCode.Space))//will have to fix for: && cannon.canFire == true
+        if (currentStep == TutorialStep.Shoot && Input.GetKeyDown(KeyCode.Space) && cannon.canFire == true)//will have to fix for: && cannon.canFire == true
         {
             NextStep();
-            Debug.Log("STEP TWO COMPLETE");
+            //Debug.Log("STEP TWO COMPLETE");
         }
 
         if (currentStep == TutorialStep.Move && simpleShip == null)
         {
             NextStep();
-            Debug.Log("STEP THREE COMPLETE");
+            //Debug.Log("STEP THREE COMPLETE");
         }
     }
 
@@ -78,7 +78,6 @@ public class Tutorial : MonoBehaviour
         {
             case TutorialStep.Start:
                 tutorialText.text = "Step here to revive your pirate!";
-                //setactive arrows
                 break;
             case TutorialStep.Shoot:
                 tutorialText.text = "Press the button in the barrel to shoot. One player must be next to the cannon and the other must shoot.";
@@ -86,14 +85,11 @@ public class Tutorial : MonoBehaviour
                 arrow2.SetActive(false);
 
                 shootArrow.SetActive(true);
-                //disable arrows
                 break;
             case TutorialStep.Move:
                 tutorialText.text = "Move the cannon to shoot the ship!";
                 shootArrow.SetActive(false);
                 ship.SetActive(true);
-                ///spawn a ship cannt attack you
-                //WHEN YOU KILL THE SHIP IT MOVES
                 break;
             case TutorialStep.End:
                 tutorialText.text = "Good Luck Pirates!";

@@ -69,4 +69,9 @@ public class GameManager : MonoBehaviour
             lane3s.RemoveAt(0);
         }
     }
+
+    public void StopSpawning()
+    {
+        StopAllCoroutines();
+    }
 }
