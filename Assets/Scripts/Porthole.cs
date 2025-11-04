@@ -9,16 +9,19 @@ public class Porthole : MonoBehaviour
     private bool isTracked = false;
     public int porthole;
     public CannonAimer cannonAimer;
-    public Cannon cannon;
+    public Cannon realCannon;
 
     public bool cannonReady;
     public bool playerReady;
+
     void Start()
     {
-        cannonAimer = cannon.GetComponent<CannonAimer>();
         playerReady = false;
         cannonReady = false;
+
+        cannonAimer = realCannon.GetComponent<CannonAimer>();
     }
+    //every porthole is checking for their own colliders
 
     // Update is called once per frame
     void Update()
@@ -46,32 +49,26 @@ public class Porthole : MonoBehaviour
                 cannonAimer.target = GameManager.Instance.lane3s[0].transform;
             }
         }
-
-        if (playerReady && cannonReady)
+        if (isTracked)
         {
-            cannon.canFire = true;
-        }
-        else
-        {
-            cannon.canFire = false;
-
+            CheckIfCanFire(realCannon);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        //Cannon cannon = other.GetComponent<Cannon>();
-        
+
         Debug.Log("CannonAimer found: " + (cannonAimer != null));
         // check if the tracked object entered
         if (other.CompareTag("Cannon"))
         {
+            Cannon cannon = other.GetComponent<Cannon>();
+
             Debug.Log("OMG CANNON IN PORTHOLE " + porthole);
             cannonTransform = other.transform;
             cannonTransform.position = this.transform.position;
             //cannonTransform.rotation = this.transform.rotation;
             isTracked = true;
-            cannonReady = true;
         }
 
         if (other.CompareTag("Player"))//one player must be next to cannon to shoot
@@ -79,28 +76,45 @@ public class Porthole : MonoBehaviour
             Debug.Log("OMG PLAYER IN PORTHOLE " + porthole);
 
             Player player = other.GetComponent<Player>();
+
             if (player.alive == true)
             {
                 playerReady = true;
+                Debug.Log("player is alive can fire");
             }
         }
+       
     }
 
     private void OnTriggerExit(Collider other)
     {
-        //Cannon cannon = other.GetComponent<Cannon>();
+        Cannon cannon = other.GetComponent<Cannon>();
+        Player player = other.GetComponent<Player>();
         if (isTracked && other.CompareTag("Cannon"))
         {
             Debug.Log("oh... cannon left porthole " + porthole);
             isTracked = false;
-            cannon.canFire = false;
-            cannonReady = false;
         }
         if (other.CompareTag("Player"))//one player must be next to cannon to shoot
         {
             Debug.Log("oh... player left porthole  " + porthole);
-            cannon.canFire = false;
             playerReady = false;
         }
+
+       
+    }
+
+    public void CheckIfCanFire(Cannon cannon)
+    {
+        if (playerReady && isTracked)
+        {
+            cannon.canFire = true;
+        }
+        else
+        {
+            cannon.canFire = false;
+        }
+
+        Debug.Log(cannon.canFire);
     }
 }

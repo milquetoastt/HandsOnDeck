@@ -144,6 +144,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 270094641205997763, guid: 9cde8a8cf551d424fad504a442cf3f4b, type: 3}
+      propertyPath: realCannon
+      value: 
+      objectReference: {fileID: 1274768379}
     - target: {fileID: 1737921418996292640, guid: 9cde8a8cf551d424fad504a442cf3f4b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.7
@@ -1161,6 +1165,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 270094641205997763, guid: 9cde8a8cf551d424fad504a442cf3f4b, type: 3}
+      propertyPath: realCannon
+      value: 
+      objectReference: {fileID: 1274768379}
     - target: {fileID: 1737921418996292640, guid: 9cde8a8cf551d424fad504a442cf3f4b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.7
@@ -1258,7 +1266,7 @@ MonoBehaviour:
   lane1s:
   - {fileID: 1567510461}
   lane2s:
-  - {fileID: 0}
+  - {fileID: 1239040584}
   lane3s: []
 --- !u!1 &650196974
 GameObject:
@@ -4320,6 +4328,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 270094641205997763, guid: 9cde8a8cf551d424fad504a442cf3f4b, type: 3}
+      propertyPath: realCannon
+      value: 
+      objectReference: {fileID: 1274768379}
     - target: {fileID: 1737921418996292640, guid: 9cde8a8cf551d424fad504a442cf3f4b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

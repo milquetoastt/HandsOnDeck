@@ -140,6 +140,10 @@ PrefabInstance:
       propertyPath: porthole
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 270094641205997763, guid: 9cde8a8cf551d424fad504a442cf3f4b, type: 3}
+      propertyPath: realCannon
+      value: 
+      objectReference: {fileID: 1108558311}
     - target: {fileID: 1737921418996292640, guid: 9cde8a8cf551d424fad504a442cf3f4b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.7
@@ -1205,6 +1209,10 @@ PrefabInstance:
       propertyPath: porthole
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 270094641205997763, guid: 9cde8a8cf551d424fad504a442cf3f4b, type: 3}
+      propertyPath: realCannon
+      value: 
+      objectReference: {fileID: 1108558311}
     - target: {fileID: 1737921418996292640, guid: 9cde8a8cf551d424fad504a442cf3f4b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.7
@@ -3687,6 +3695,10 @@ PrefabInstance:
       propertyPath: porthole
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 270094641205997763, guid: 9cde8a8cf551d424fad504a442cf3f4b, type: 3}
+      propertyPath: realCannon
+      value: 
+      objectReference: {fileID: 1108558311}
     - target: {fileID: 1737921418996292640, guid: 9cde8a8cf551d424fad504a442cf3f4b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

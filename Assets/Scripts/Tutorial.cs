@@ -60,7 +60,7 @@ public class Tutorial : MonoBehaviour
             }
         }
 
-        if (currentStep == TutorialStep.Shoot && Input.GetKeyDown(KeyCode.Space) && cannon.canFire == true)//will have to fix for: && cannon.canFire == true
+        if (currentStep == TutorialStep.Shoot && Input.GetKeyDown(KeyCode.Space) && cannon.canFire)//will have to fix for: && cannon.canFire == true
         {
             NextStep();
             //Debug.Log("STEP TWO COMPLETE");
