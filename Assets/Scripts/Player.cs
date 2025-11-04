@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
         Debug.Log("Player Respawn");
 
         ChangeExpressionOffset(0f);
-        playerSprite.color = new Color(1, 0, 0, 1);
+        //playerSprite.color = new Color(1, 0, 0, 1);
         haloRenderer.enabled = false;
         alive = true;
     }

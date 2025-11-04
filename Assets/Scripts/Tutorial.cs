@@ -15,6 +15,7 @@ public class Tutorial : MonoBehaviour
     public GameObject shootArrow;
 
     public SimpleShip simpleShip;
+    public GameObject tentacle; 
     public GameObject ship;
     public Cannon cannon;
 
@@ -37,6 +38,8 @@ public class Tutorial : MonoBehaviour
 
         player1.Die();//to change assets
         player2.Die();
+
+        tentacle.SetActive(false);
 
         arrow1.SetActive(true);
         arrow2.SetActive(true);
@@ -84,6 +87,7 @@ public class Tutorial : MonoBehaviour
                 arrow1.SetActive(false);
                 arrow2.SetActive(false);
 
+                tentacle.SetActive(true);
                 shootArrow.SetActive(true);
                 break;
             case TutorialStep.Move:
