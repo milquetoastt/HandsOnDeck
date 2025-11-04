@@ -16,6 +16,8 @@ public class Porthole : MonoBehaviour
     void Start()
     {
         cannonAimer = cannon.GetComponent<CannonAimer>();
+        playerReady = false;
+        cannonReady = false;
     }
 
     // Update is called once per frame
@@ -45,9 +47,14 @@ public class Porthole : MonoBehaviour
             }
         }
 
-            if (playerReady && cannonReady)
+        if (playerReady && cannonReady)
         {
             cannon.canFire = true;
+        }
+        else
+        {
+            cannon.canFire = false;
+
         }
     }
 
@@ -70,7 +77,12 @@ public class Porthole : MonoBehaviour
         if (other.CompareTag("Player"))//one player must be next to cannon to shoot
         {
             Debug.Log("OMG PLAYER IN PORTHOLE " + porthole);
-            playerReady = true;
+
+            Player player = other.GetComponent<Player>();
+            if (player.alive == true)
+            {
+                playerReady = true;
+            }
         }
     }
 

@@ -45,6 +45,7 @@ public class Player : MonoBehaviour
 
         ChangeExpressionOffset(0.25f);
         haloRenderer.enabled = true;
+        alive = false;
     }
     
     private void ChangeExpressionOffset(float Offset)
