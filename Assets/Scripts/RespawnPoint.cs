@@ -23,9 +23,10 @@ public class RespawnPoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag("Player"))
+        var player = collision.GetComponent<Player>();
+        if (collision.CompareTag("Player") && !player.alive && respawnRoutine == null)
         {
-            var player = collision.GetComponent<Player>();
+            
             respawnRoutine = StartCoroutine(Respawn(player));
         }
     }
@@ -39,6 +40,7 @@ public class RespawnPoint : MonoBehaviour
             {
                 Debug.Log("Player exited spawn. Stopping coroutine.");
                 StopCoroutine(respawnRoutine);
+                countdownText.gameObject.SetActive(false);
                 respawnRoutine = null;
             }
         }
