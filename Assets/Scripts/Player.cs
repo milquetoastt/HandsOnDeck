@@ -15,39 +15,36 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        alive = alive;
+        alive = true;
         playerSprite = GetComponent<SpriteRenderer>();
         materialInstance = faceRenderer.material;
+
+        ChangeExpressionOffset(0.00f);
+        haloRenderer.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        ChangeExpressionOffset(0.00f);
-        haloRenderer.enabled = false;
-        //if fallen off hole/get hit by enemy
-        if (!alive)
-        {
-            ChangeExpressionOffset(0.25f);
-            haloRenderer.enabled = true;
-            Die();
-        }
+
     }
     
     public void RespawnPlayer() //StartCoroutine(RespawnPlayer());
     {
-        ChangeExpressionOffset(0f);
         Debug.Log("Player Respawn");
+
+        ChangeExpressionOffset(0f);
         playerSprite.color = new Color(1, 0, 0, 1);
+        haloRenderer.enabled = false;
         alive = true;
     }
 
     public void Die()
     {
         Debug.Log("YouDied");
-        //also disable button press? Probably will just have to check if other player near cannon
-        playerSprite.color = new Color(1, 0, 0, 0.3f);//make player a ghost? 
 
+        ChangeExpressionOffset(0.25f);
+        haloRenderer.enabled = true;
     }
     
     private void ChangeExpressionOffset(float Offset)

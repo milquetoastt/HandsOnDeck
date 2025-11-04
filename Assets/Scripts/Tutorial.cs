@@ -16,6 +16,7 @@ public class Tutorial : MonoBehaviour
 
     public SimpleShip simpleShip;
     public GameObject ship;
+    public Cannon cannon;
 
 
     public TMP_Text tutorialText; 
@@ -31,8 +32,11 @@ public class Tutorial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player1.alive = false;
+        player1.alive = false;//to make sure they are dead
         player2.alive = false;
+
+        player1.Die();//to change assets
+        player2.Die();
 
         arrow1.SetActive(true);
         arrow2.SetActive(true);
@@ -53,7 +57,7 @@ public class Tutorial : MonoBehaviour
             }
         }
 
-        if (currentStep == TutorialStep.Shoot && Input.GetKeyDown(KeyCode.Space))
+        if (currentStep == TutorialStep.Shoot && Input.GetKeyDown(KeyCode.Space))//will have to fix for: && cannon.canFire == true
         {
             NextStep();
             Debug.Log("STEP TWO COMPLETE");
@@ -77,7 +81,7 @@ public class Tutorial : MonoBehaviour
                 //setactive arrows
                 break;
             case TutorialStep.Shoot:
-                tutorialText.text = "Press the button in the barrel to shoot.";
+                tutorialText.text = "Press the button in the barrel to shoot. One player must be next to the cannon and the other must shoot.";
                 arrow1.SetActive(false);
                 arrow2.SetActive(false);
 
