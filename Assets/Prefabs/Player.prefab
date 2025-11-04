@@ -72,7 +72,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectName: player1
   PositionOffset: {x: 0, y: 0, z: 0}
-  RotationOffset: {x: -90, y: 90, z: 0}
+  RotationOffset: {x: -90, y: 90, z: 90}
 --- !u!114 &5755941045488840272
 MonoBehaviour:
   m_ObjectHideFlags: 0
