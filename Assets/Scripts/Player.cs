@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     public bool alive;
     private SpriteRenderer playerSprite;
-
+    public float fixedY = 1.511f;
     void Start()
     {
         alive = true; 
@@ -17,7 +17,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Vector3 pos = transform.position;
+        //pos.y = fixedY;
+        //transform.position = pos;
         //if fallen off hole/get hit by enemy
         if (!alive)
         {
