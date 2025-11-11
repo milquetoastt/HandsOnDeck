@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
         numHearts = deck.GetHealth() / 10;
         //if num hearts less than 10
             //THEN heart[numHearts] change sprite
-        if (numHearts < 10 && deck.GetHealth() < 95) //added 95 to make it less quick
+        if (numHearts < 10) 
         {
             heart[numHearts].GetComponent<Image>().sprite = emptyHeart;
         }

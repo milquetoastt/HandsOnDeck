@@ -107,8 +107,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.5353764, y: 1, z: 1.585187}
+  m_Center: {x: 0.010093272, y: 0, z: 0.06104663}
 --- !u!114 &270094641205997763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +123,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   porthole: 1
   cannonAimer: {fileID: 8085944230165978769, guid: 00c97a78612940243a58281c5bfd277d, type: 3}
+  cannon: {fileID: 0}
+  cannonReady: 0
+  playerReady: 0
 --- !u!54 &7521467929058396881
 Rigidbody:
   m_ObjectHideFlags: 0
