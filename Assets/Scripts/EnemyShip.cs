@@ -58,7 +58,7 @@ public class EnemyShip : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        EnemyCannonBall cannonBall = other.GetComponent<EnemyCannonBall>();
+        PlayerCannonBall cannonBall = other.GetComponent<PlayerCannonBall>();
         if(cannonBall != null)
         {
             Destroy(other.gameObject);

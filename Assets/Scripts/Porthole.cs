@@ -115,6 +115,6 @@ public class Porthole : MonoBehaviour
             cannon.canFire = false;
         }
 
-        Debug.Log(cannon.canFire);
+        //Debug.Log(cannon.canFire);
     }
 }

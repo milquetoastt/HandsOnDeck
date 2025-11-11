@@ -20,7 +20,7 @@ public class Cannon : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && canFire)
+        if (Input.GetKeyDown(KeyCode.Space) && canFire && currentAmmo!=0)
         {
             GameObject cannonBall = Instantiate(projectile, firepoint.position, firepoint.rotation);
 

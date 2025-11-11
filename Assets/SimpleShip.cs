@@ -35,7 +35,7 @@ public class SimpleShip : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        EnemyCannonBall cannonBall = other.GetComponent<EnemyCannonBall>();
+        PlayerCannonBall cannonBall = other.GetComponent<PlayerCannonBall>();
         if (cannonBall != null)
         {
             Destroy(other.gameObject);

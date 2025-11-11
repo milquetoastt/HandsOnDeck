@@ -81,7 +81,7 @@ MonoBehaviour:
   - {x: 0, y: 0.13, z: -5.5}
   - {x: -3.5, y: 0.13, z: -5.5}
   fireSpeed: 15
-  CannonFire: {fileID: 8082998956386997204, guid: 74f4be421d3beb64a8a4402a81ee29a1, type: 3}
+  CannonFire: {fileID: 4592536597086601352, guid: 7606c74bd94fe474f86e1a2caa4bc836, type: 3}
 --- !u!54 &1682049521735526422
 Rigidbody:
   m_ObjectHideFlags: 0
