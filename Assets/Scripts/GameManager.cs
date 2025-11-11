@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
         ResetPatternPool();
         StartCoroutine(PatternDropLoop());
         StartCoroutine(SpawnAShip());
+        StartCoroutine(SpawnAmmo());
     }
 
     private IEnumerator SpawnAShip()

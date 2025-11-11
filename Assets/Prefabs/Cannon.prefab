@@ -107,6 +107,8 @@ MonoBehaviour:
   firepoint: {fileID: 4811810518163281542}
   launchVelocity: 25
   canFire: 0
+  currentAmmo: 5
+  maxAmmo: 5
 --- !u!114 &2483532118374656094
 MonoBehaviour:
   m_ObjectHideFlags: 0

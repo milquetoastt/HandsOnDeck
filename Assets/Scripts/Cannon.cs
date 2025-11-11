@@ -9,7 +9,8 @@ public class Cannon : MonoBehaviour
     public float launchVelocity = 700f;
     private Vector3 offset = new Vector3(0, 2f, 0);
     public bool canFire = false;
-    public int AmmoCannon;
+    public int currentAmmo;
+    public int maxAmmo;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,16 @@ public class Cannon : MonoBehaviour
 
             // Directly set initial velocity instead of AddRelativeForce
             rb.velocity = firepoint.TransformDirection(Vector3.right * launchVelocity);
+            currentAmmo--;
         }
     }
-
+    public bool AddAmmo()
+    {
+        if (currentAmmo != maxAmmo)
+        {
+            currentAmmo++;
+            return true;
+        }
+            return false;
+    }
 }
