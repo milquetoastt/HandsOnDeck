@@ -45,7 +45,7 @@ public class Tutorial : MonoBehaviour
         arrow2.SetActive(true);
         shootArrow.SetActive(false);
 
-        GameManager.Instance.StopSpawning();
+        //GameManager.Instance.StopSpawning();
     }
     void Update()
     {
