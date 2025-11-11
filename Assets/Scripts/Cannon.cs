@@ -9,24 +9,16 @@ public class Cannon : MonoBehaviour
     public float launchVelocity = 700f;
     private Vector3 offset = new Vector3(0, 2f, 0);
     public bool canFire = false;
+    public int AmmoCannon;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        //check if player collider with you is dead, if then, can't hold cannon, if player colliding with you is alive then can shoot
-        //press button to shoot for now, shoot a ball at a certain velocity
-
-        //if (Input.GetButtonDown("Fire1"))
-        //{
-        //    GameObject cannonBall = Instantiate(projectile, firepoint.position, firepoint.rotation);
-        //    cannonBall.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(launchVelocity, 0, 0));
-        //}
-
         if (Input.GetKeyDown(KeyCode.Space) && canFire)
         {
             GameObject cannonBall = Instantiate(projectile, firepoint.position, firepoint.rotation);
@@ -37,4 +29,5 @@ public class Cannon : MonoBehaviour
             rb.velocity = firepoint.TransformDirection(Vector3.right * launchVelocity);
         }
     }
+
 }

@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     private List<int> availablePatterns = new List<int>();
     private int totalPatterns;
 
+    public GameObject Ammo;
+    private Vector3 spawnPos;
 
     // Start is called before the first frame update
     void Awake()
@@ -112,4 +114,16 @@ public class GameManager : MonoBehaviour
         }
         Debug.Log("Pattern pool reset");
     }
+
+    private IEnumerator SpawnAmmo()
+    {
+        float xValue = Random.Range(-3.5f, 3.5f);
+        float zValue = Random.Range(-1f, 1.6f);
+        spawnPos = new Vector3(xValue, 0.74f, zValue);
+        Instantiate(Ammo, spawnPos, Quaternion.identity);
+        Debug.Log("ammo spawn");
+        yield return new WaitForSeconds(10);
+        StartCoroutine(SpawnAmmo());
+    }
+
 }
