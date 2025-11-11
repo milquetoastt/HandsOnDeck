@@ -25,7 +25,7 @@ public class EnemyShip : MonoBehaviour
     void Start()
     {
         //Debug.Log("This ship will spawn in lane " + lane);
-        StartCoroutine(EnemyFireCoroutine());
+        //StartCoroutine(EnemyFireCoroutine());  <- OLD METHOD. UNCOMMENT TO USE OLD CANNONBALL SYSTEM
     }
 
     //if health is 0, destroy ship

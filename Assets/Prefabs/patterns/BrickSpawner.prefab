@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1062055663426995267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9117659778607889563}
+  - component: {fileID: 4179094612943133448}
+  m_Layer: 0
+  m_Name: BrickSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9117659778607889563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062055663426995267}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6594619, y: 0.5919146, z: -0.9230952}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4179094612943133448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062055663426995267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 215afb54dce7c2d42b3a8a485f02a8a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brickPrefab: {fileID: 4217201127108295909, guid: e76555d2fb16ff74d93db3ee4a897e68, type: 3}
+  patterns:
+  - patternName: Vertical out-in
+    bricks:
+    - position: {x: 3, y: 0, z: 0}
+      scale: {x: 1.5, y: 1, z: 5}
+      delay: 0
+    - position: {x: -3, y: 0, z: 0}
+      scale: {x: 1.5, y: 1, z: 5}
+      delay: 0
+    - position: {x: 1.5, y: 0, z: 0}
+      scale: {x: 1.5, y: 1, z: 5}
+      delay: 2
+    - position: {x: -1.5, y: 0, z: 0}
+      scale: {x: 1.5, y: 1, z: 5}
+      delay: 0
+    - position: {x: 0, y: 0, z: 0}
+      scale: {x: 1.5, y: 1, z: 5}
+      delay: 2
+  - patternName: Vertical in-out
+    bricks:
+    - position: {x: 0, y: 0, z: 0}
+      scale: {x: 1.5, y: 1, z: 5}
+      delay: 0
+    - position: {x: -1.5, y: 0, z: 0}
+      scale: {x: 1.5, y: 1, z: 5}
+      delay: 2
+    - position: {x: 1.5, y: 0, z: 0}
+      scale: {x: 1.5, y: 1, z: 5}
+      delay: 0
+    - position: {x: -3, y: 0, z: 0}
+      scale: {x: 1.5, y: 1, z: 5}
+      delay: 2
+    - position: {x: 3, y: 0, z: 0}
+      scale: {x: 1.5, y: 1, z: 5}
+      delay: 0
+  - patternName: Horizontal out-in
+    bricks:
+    - position: {x: 0, y: 0, z: 1.9875}
+      scale: {x: 7, y: 1, z: 1.325}
+      delay: 0
+    - position: {x: 0, y: 0, z: -1.9875}
+      scale: {x: 7, y: 1, z: 1.325}
+      delay: 0
+    - position: {x: 0, y: 0, z: 0.6625}
+      scale: {x: 7, y: 1, z: 1.325}
+      delay: 2
+    - position: {x: 0, y: 0, z: -0.6625}
+      scale: {x: 7, y: 1, z: 1.325}
+      delay: 0
+  - patternName: Horizontal front-back
+    bricks:
+    - position: {x: 0, y: 0, z: -1.9875}
+      scale: {x: 7, y: 1, z: 1.325}
+      delay: 0
+    - position: {x: 0, y: 0, z: -0.6625}
+      scale: {x: 7, y: 1, z: 1.325}
+      delay: 2
+    - position: {x: 0, y: 0, z: 0.6625}
+      scale: {x: 7, y: 1, z: 1.325}
+      delay: 2
+    - position: {x: 0, y: 0, z: 1.9875}
+      scale: {x: 7, y: 1, z: 1.325}
+      delay: 2
+  - patternName: Horizontal back-front
+    bricks:
+    - position: {x: 0, y: 0, z: 1.9875}
+      scale: {x: 7, y: 1, z: 1.325}
+      delay: 0
+    - position: {x: 0, y: 0, z: 0.6625}
+      scale: {x: 7, y: 1, z: 1.325}
+      delay: 2
+    - position: {x: 0, y: 0, z: -0.6625}
+      scale: {x: 7, y: 1, z: 1.325}
+      delay: 2
+    - position: {x: 0, y: 0, z: -1.9875}
+      scale: {x: 7, y: 1, z: 1.325}
+      delay: 2
