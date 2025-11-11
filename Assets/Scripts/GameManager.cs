@@ -12,6 +12,13 @@ public class GameManager : MonoBehaviour
     public List<GameObject> lane2s;
     public List<GameObject> lane3s;
 
+    public BrickSpawner brickSpawner;
+    public float patternInterval = 10f; // time between pattern drops
+
+    private List<int> availablePatterns = new List<int>();
+    private int totalPatterns;
+
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -21,6 +28,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        totalPatterns = brickSpawner.GetPatternCount();
+        ResetPatternPool();
+        StartCoroutine(PatternDropLoop());
         StartCoroutine(SpawnAShip());
     }
 
@@ -68,5 +78,38 @@ public class GameManager : MonoBehaviour
         {
             lane3s.RemoveAt(0);
         }
+    }
+
+    private IEnumerator PatternDropLoop()
+    {
+        while (true)
+        {
+            int chosenIndex = ChooseNextPattern();
+            brickSpawner.SpawnPattern(chosenIndex);
+            yield return new WaitForSeconds(patternInterval);
+        }
+    }
+
+    private int ChooseNextPattern()
+    {
+        if (availablePatterns.Count == 0)
+            ResetPatternPool();
+
+        int randomIndex = Random.Range(0, availablePatterns.Count);
+        int chosenPattern = availablePatterns[randomIndex];
+        availablePatterns.RemoveAt(randomIndex);
+
+        Debug.Log("Chosen pattern: " + chosenPattern);
+        return chosenPattern;
+    }
+
+    private void ResetPatternPool()
+    {
+        availablePatterns.Clear();
+        for (int i = 0; i < totalPatterns; i++)
+        {
+            availablePatterns.Add(i);
+        }
+        Debug.Log("Pattern pool reset");
     }
 }
