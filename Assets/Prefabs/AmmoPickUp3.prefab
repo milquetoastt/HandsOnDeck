@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1016403875041514317}
   - component: {fileID: 8799793251213401962}
   m_Layer: 0
-  m_Name: AmmoPickUp
+  m_Name: AmmoPickUp3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f6c895b66b5e5747adec212e5d7aa84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  addAmmo: 3
 --- !u!136 &8799793251213401962
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -135,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5887964308754822482, guid: 578cf31bbe8dae34a9449305f4f8e9c5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4450391104448233125, guid: 578cf31bbe8dae34a9449305f4f8e9c5, type: 3}
       propertyPath: m_IsActive
@@ -148,6 +149,14 @@ PrefabInstance:
     - target: {fileID: -4029777342017853814, guid: 578cf31bbe8dae34a9449305f4f8e9c5, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2550944189620303447, guid: 578cf31bbe8dae34a9449305f4f8e9c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.092
+      objectReference: {fileID: 0}
+    - target: {fileID: -2550944189620303447, guid: 578cf31bbe8dae34a9449305f4f8e9c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.053
       objectReference: {fileID: 0}
     - target: {fileID: -1583700365877368666, guid: 578cf31bbe8dae34a9449305f4f8e9c5, type: 3}
       propertyPath: m_IsActive

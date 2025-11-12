@@ -109,6 +109,7 @@ MonoBehaviour:
   canFire: 0
   currentAmmo: 5
   maxAmmo: 5
+  pickUpAmmo: 3
 --- !u!114 &2483532118374656094
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ public class AmmoPickUp : MonoBehaviour
 {
     GameObject cannonObject;
     Cannon cannon;
+    public int addAmmo;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class AmmoPickUp : MonoBehaviour
         var player = collision.GetComponent<Player>();
         if (collision.CompareTag("Player") && player.alive)
         {
-            if (cannon.AddAmmo())
+            if (cannon.AddAmmo(addAmmo))
             {
                 Destroy(gameObject);
             }

@@ -118,8 +118,8 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator SpawnAmmo()
     {
-        float xValue = Random.Range(-3.5f, 3.5f);
-        float zValue = Random.Range(-1f, 1.6f);
+        float xValue = Random.Range(-3f, 3f);
+        float zValue = Random.Range(-3f, 0.12f);
         spawnPos = new Vector3(xValue, 0.74f, zValue);
         Instantiate(Ammo, spawnPos, Quaternion.identity);
         Debug.Log("ammo spawn");

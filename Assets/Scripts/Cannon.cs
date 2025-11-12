@@ -31,11 +31,11 @@ public class Cannon : MonoBehaviour
             currentAmmo--;
         }
     }
-    public bool AddAmmo()
+    public bool AddAmmo(int pickUpAmmo)
     {
         if (currentAmmo != maxAmmo)
         {
-            currentAmmo++;
+            currentAmmo+=pickUpAmmo;
             return true;
         }
             return false;
