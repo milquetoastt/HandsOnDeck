@@ -58,7 +58,7 @@ public class Porthole : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        Debug.Log("CannonAimer found: " + (cannonAimer != null));
+        //Debug.Log("CannonAimer found: " + (cannonAimer != null));
         // check if the tracked object entered
         if (other.CompareTag("Cannon"))
         {
