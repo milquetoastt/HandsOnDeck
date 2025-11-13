@@ -114,13 +114,6 @@ public class UIManager : MonoBehaviour
                     localPos.y = (localPos.y * manualScale.y) + manualOffset.y;
 
                     targetPosition = localPos;
-
-
-                    Debug.Log("laneposition: " + laneposition);
-
-                    Debug.Log("localPos: "+localPos);
-                    Debug.Log("screenposition: "+screenPosition);
-
                 }
 
             }

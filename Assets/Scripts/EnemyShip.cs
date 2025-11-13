@@ -60,17 +60,28 @@ public class EnemyShip : MonoBehaviour
         if (playership != null)
         {
             RankChange();
-            audioSource.PlayOneShot(deathSound);
+            //audioSource.PlayOneShot(deathSound);
+            AudioSource.PlayClipAtPoint(deathSound, transform.position);
             Destroy(this.gameObject);
         }
 
         PlayerCannonBall cannonBall = other.GetComponent<PlayerCannonBall>();
         if(cannonBall != null)
         {
+            //audioSource.PlayOneShot(deathSound);
+            //audioSource.PlayOneShot(sinkSound);
+
+            if (deathSound != null)
+            {
+                AudioSource.PlayClipAtPoint(deathSound, transform.position);
+            }
+            if (sinkSound != null)
+            {
+                AudioSource.PlayClipAtPoint(sinkSound, transform.position);
+            }
             Destroy(other.gameObject);
             RankChange();
-            audioSource.PlayOneShot(deathSound);
-            audioSource.PlayOneShot(sinkSound);
+
             Destroy(this.gameObject);
         }
     }
