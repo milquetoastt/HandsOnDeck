@@ -8,6 +8,7 @@ public class CannonAimer : MonoBehaviour
 {
     public Transform target;  // The position you want to hit
     public bool preferHighArc = false;
+    public int numLane;
 
     private Cannon cannon;
 
@@ -61,4 +62,11 @@ public class CannonAimer : MonoBehaviour
         rot = Quaternion.LookRotation(launchDir) * Quaternion.Euler(0, -90f,0);
         return true;
     }
+
+    public int GetNumberLane()
+    {
+        return numLane; 
+    }
+
+
 }

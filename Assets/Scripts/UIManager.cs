@@ -7,6 +7,7 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     //List<GameObject> heart = new List<GameObject>();
+    private Camera mainCamera;
     public GameObject[] heart = new GameObject[10];
     public PlayerShip deck;
     public Cannon cannon; 
@@ -18,18 +19,35 @@ public class UIManager : MonoBehaviour
 
     public TMP_Text maxAmmoText;
     public TMP_Text currentAmmoText;
-    // Start is called before the first frame update
+
+    //cannon aimer
+    public Image crossHair;
+    public float moveSpeed;
+    public float timeToNewPos;
+
+    //RectTransform of crosshair
+    private RectTransform crossHairRectTransform;
+    public Vector2 manualScale = new Vector2(1f, 1f);
+    public Vector2 manualOffset = new Vector2(0f, 0f);
+
+    private RectTransform canvasRectTransform;
+    private Vector2 targetPosition;
+    private float minX, maxX, minY, maxY;
+
     void Start()
     {
+        mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        cannon = GameObject.FindWithTag("Cannon").GetComponent<Cannon>();
         maxAmmoText.text = cannon.GetMaxAmmo().ToString();
+        crossHairRectTransform = crossHair.rectTransform;
+        canvasRectTransform = GetComponent<RectTransform>();
+        CalculateBounds();
+        StartCoroutine(Wander());
     }
 
-    // Update is called once per frame
     void Update()
     {
         numHearts = deck.GetHealth() / 10;
-        //if num hearts less than 10
-            //THEN heart[numHearts] change sprite
         if (numHearts < 10) 
         {
             heart[numHearts].GetComponent<Image>().sprite = emptyHeart;
@@ -42,6 +60,103 @@ public class UIManager : MonoBehaviour
         }
 
         currentAmmoText.text = cannon.GetCurrentAmmo().ToString();
+    }
 
+    void CalculateBounds()
+    {
+        //float canvasWidth = canvasRectTransform.rect.width;
+        //float canvasHeight = canvasRectTransform.rect.height;
+
+        float canvasWidth = GetComponent<CanvasScaler>().referenceResolution.x;
+        float canvasHeight = GetComponent<CanvasScaler>().referenceResolution.y;
+
+        float imageWidth = crossHairRectTransform.rect.width;
+        float imageHeight = crossHairRectTransform.rect.height;
+
+        minX = -(canvasWidth / 2) + (imageWidth / 2);
+        maxX = (canvasWidth / 2) - (imageWidth / 2);
+        minY = -(canvasHeight / 2) + (imageHeight / 2);
+        maxY = (canvasHeight / 2) - (imageHeight / 2);
+    }
+
+    IEnumerator Wander()
+    {
+        while (true)
+        {
+            int randomEdge = Random.Range(0, 4);
+            if (cannon.GetComponent<CannonAimer>().GetNumberLane() != 0)
+            {
+                if (cannon.GetComponent<CannonAimer>().target == null)
+                {
+                    randomScreenPositon(randomEdge);
+                }
+                else
+                {
+                    Vector3 laneposition = cannon.GetComponent<CannonAimer>().target.position;
+                    Vector3 screenPosition = mainCamera.WorldToScreenPoint(laneposition);
+
+                    Vector2 localPos;
+
+                    Camera eventCamera = (GetComponent<Canvas>().renderMode == RenderMode.ScreenSpaceOverlay) ? null : mainCamera;
+                    RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                        canvasRectTransform,
+                        screenPosition,
+                        eventCamera,
+                        out localPos
+                    );
+
+
+                    localPos.x = (localPos.x * manualScale.x) + manualOffset.x;
+                    localPos.y = (localPos.y * manualScale.y) + manualOffset.y;
+
+                    targetPosition = localPos;
+
+
+                    Debug.Log("laneposition: " + laneposition);
+
+                    Debug.Log("localPos: "+localPos);
+                    Debug.Log("screenposition: "+screenPosition);
+
+                }
+
+            }
+            else 
+            {
+                randomScreenPositon(randomEdge);
+            }
+
+            while (Vector2.Distance(crossHairRectTransform.anchoredPosition, targetPosition) > 1f)
+            {
+                crossHairRectTransform.anchoredPosition = Vector2.MoveTowards(
+                    crossHairRectTransform.anchoredPosition,
+                    targetPosition,
+                    moveSpeed * Time.deltaTime
+                );
+
+                yield return null;
+            }
+
+            yield return new WaitForSeconds(timeToNewPos);
+        }
+    }
+
+    void randomScreenPositon(int randomEdge)
+    {
+        switch (randomEdge)
+        {
+            case 0: // Top Edge
+                targetPosition = new Vector2(Random.Range(minX, maxX), maxY);
+                break;
+            case 1: // Bottom Edge
+                targetPosition = new Vector2(Random.Range(minX, maxX), minY);
+                break;
+            case 2: // Left Edge
+                targetPosition = new Vector2(minX, Random.Range(minY, maxY));
+                break;
+            case 3: // Right Edge
+                targetPosition = new Vector2(maxX, Random.Range(minY, maxY));
+                break;
+        }
     }
 }
+

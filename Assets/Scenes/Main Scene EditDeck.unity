@@ -1339,6 +1339,14 @@ PrefabInstance:
       propertyPath: cannon
       value: 
       objectReference: {fileID: 1582246693}
+    - target: {fileID: 8636854006316705714, guid: e58dff187351a1047800014d05d5d6dd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 401
+      objectReference: {fileID: 0}
+    - target: {fileID: 8636854006316705714, guid: e58dff187351a1047800014d05d5d6dd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 191
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 391831811974733738, guid: e58dff187351a1047800014d05d5d6dd, type: 3}

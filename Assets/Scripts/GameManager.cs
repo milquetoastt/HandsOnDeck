@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         GameObject instance = Instantiate(enemyShipPrefab);
         EnemyShip enemyShip = instance.GetComponent<EnemyShip>();
         int lane = enemyShip.lane;
-        Debug.Log("New ship spawned in lane " + lane);
+        //Debug.Log("New ship spawned in lane " + lane);
         if (lane == 1)
         {
             lane1s.Add(instance);
@@ -122,7 +122,6 @@ public class GameManager : MonoBehaviour
         float zValue = Random.Range(-3f, 0.12f);
         spawnPos = new Vector3(xValue, 0.74f, zValue);
         Instantiate(Ammo, spawnPos, Quaternion.identity);
-        Debug.Log("ammo spawn");
         yield return new WaitForSeconds(10);
         StartCoroutine(SpawnAmmo());
     }

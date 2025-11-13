@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial.unity
     guid: 18e8873c87861724ca7f5b396cdb3f7a
   - enabled: 1
+    path: Assets/Scenes/Main Scene EditDeck.unity
+    guid: 60068b268844da94485894bdce7bc7c1
+  - enabled: 1
     path: Assets/Scenes/Main Scene 1.unity
     guid: 1dc7a16f07e905e44bf51a1c1c1d4739
   m_configObjects: {}
