@@ -59,8 +59,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.32908592, y: 1.0780889, z: 0.3552499}
-  m_Center: {x: -0.0013177535, y: -0.45538732, z: 0.008494836}
+  m_Size: {x: 0.32908592, y: 1.8414838, z: 0.3552499}
+  m_Center: {x: -0.0013177535, y: -0.8370848, z: 0.008494836}
 --- !u!114 &2996723214736237146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alive: 1
+  invisibility: 0
   faceRenderer: {fileID: 6298719833706737650}
   haloRenderer: {fileID: 8550210810511041765}
 --- !u!212 &7962617386283998763
@@ -189,7 +190,7 @@ CharacterController:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Height: 0.19999999
   m_Radius: 0.099999994
@@ -205,7 +206,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2557595019709801538}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0ca75a43550c0142bed46c35d4e2984, type: 3}
   m_Name: 
