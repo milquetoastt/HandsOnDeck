@@ -11,6 +11,10 @@ public class Cannon : MonoBehaviour
     public bool canFire = false;
     public int currentAmmo;
     public int maxAmmo;
+
+
+    public AudioSource audioSource;
+    public AudioClip shootCannon;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +26,8 @@ public class Cannon : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && canFire && currentAmmo!=0)
         {
+            AudioSource.PlayClipAtPoint(shootCannon, transform.position);
+
             GameObject cannonBall = Instantiate(projectile, firepoint.position, firepoint.rotation);
 
             Rigidbody rb = cannonBall.GetComponent<Rigidbody>();

@@ -55,7 +55,7 @@ public class EnemyShip : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("ENemey ship hit something");
+        //Debug.Log("ENemey ship hit something");
         PlayerShip playership = other.GetComponent<PlayerShip>();
         if (playership != null)
         {
