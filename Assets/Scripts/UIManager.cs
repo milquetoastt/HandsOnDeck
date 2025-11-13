@@ -21,7 +21,9 @@ public class UIManager : MonoBehaviour
     public TMP_Text currentAmmoText;
 
     //cannon aimer
-    public Image crossHair;
+    public GameObject crossHairUI;
+    public Sprite lockCrossHair;
+    public Sprite looseCrossHair;
     public float moveSpeed;
     public float timeToNewPos;
 
@@ -39,7 +41,7 @@ public class UIManager : MonoBehaviour
         mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         cannon = GameObject.FindWithTag("Cannon").GetComponent<Cannon>();
         maxAmmoText.text = cannon.GetMaxAmmo().ToString();
-        crossHairRectTransform = crossHair.rectTransform;
+        crossHairRectTransform = crossHairUI.GetComponent<Image>().rectTransform;
         canvasRectTransform = GetComponent<RectTransform>();
         CalculateBounds();
         StartCoroutine(Wander());
@@ -92,6 +94,8 @@ public class UIManager : MonoBehaviour
                 }
                 else
                 {
+                    crossHairUI.GetComponent<Image>().sprite = lockCrossHair;
+
                     Vector3 laneposition = cannon.GetComponent<CannonAimer>().target.position;
                     Vector3 screenPosition = mainCamera.WorldToScreenPoint(laneposition);
 
@@ -142,6 +146,8 @@ public class UIManager : MonoBehaviour
 
     void randomScreenPositon(int randomEdge)
     {
+        crossHairUI.GetComponent<Image>().sprite = looseCrossHair;
+
         switch (randomEdge)
         {
             case 0: // Top Edge

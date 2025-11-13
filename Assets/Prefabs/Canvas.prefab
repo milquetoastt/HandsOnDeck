@@ -1173,7 +1173,9 @@ MonoBehaviour:
   loseScreen: {fileID: 1496304728007036603}
   maxAmmoText: {fileID: 8028119252875010908}
   currentAmmoText: {fileID: 8471515794693066761}
-  crossHair: {fileID: 6526625149213364521}
+  crossHairUI: {fileID: 2605324854918628949}
+  lockCrossHair: {fileID: 21300000, guid: cff880080d4a145429303f55ebda0183, type: 3}
+  looseCrossHair: {fileID: 21300000, guid: 08037538493818546bda38efac6c441e, type: 3}
   moveSpeed: 1200
   timeToNewPos: 0
   manualScale: {x: 3, y: 3}
