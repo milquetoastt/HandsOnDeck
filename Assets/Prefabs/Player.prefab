@@ -33,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.17, y: 0.8, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: 8}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7520021852423725639}
@@ -92,6 +92,7 @@ MonoBehaviour:
   invisibility: 0
   faceRenderer: {fileID: 6298719833706737650}
   haloRenderer: {fileID: 8550210810511041765}
+  fixedY: 1.16
 --- !u!212 &7962617386283998763
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -110,31 +110,31 @@ MonoBehaviour:
       scale: {x: 7, y: 1, z: 1.325}
       delay: 2
   - patternName: Vertical in-out
-    isActive: 0
+    isActive: 1
     bricks:
     - position: {x: 0, y: 0, z: 0}
       scale: {x: 1, y: 1, z: 5}
       delay: 0
     - position: {x: 1, y: 0, z: 1.9875}
       scale: {x: 1, y: 1, z: 5}
-      delay: 2.5
+      delay: 4
     - position: {x: -1, y: 0, z: 1.9875}
       scale: {x: 1, y: 1, z: 5}
       delay: 0
     - position: {x: -2, y: 0, z: 1.9875}
       scale: {x: 1, y: 1, z: 5}
-      delay: 2.5
+      delay: 4
     - position: {x: 2, y: 0, z: 1.9875}
       scale: {x: 1, y: 1, z: 5}
       delay: 0
     - position: {x: 3, y: 0, z: -0.6}
       scale: {x: 1, y: 1, z: 4}
-      delay: 2.5
+      delay: 4
     - position: {x: -3, y: 0, z: -0.6}
       scale: {x: 1, y: 1, z: 4}
       delay: 0
   - patternName: Vertical out-in
-    isActive: 0
+    isActive: 1
     bricks:
     - position: {x: -3, y: 0, z: -0.6}
       scale: {x: 1, y: 1, z: 4}
@@ -144,105 +144,105 @@ MonoBehaviour:
       delay: 0
     - position: {x: -2, y: 0, z: 0}
       scale: {x: 1, y: 1, z: 5}
-      delay: 2.5
+      delay: 4
     - position: {x: 2, y: 0, z: 0}
       scale: {x: 1, y: 1, z: 5}
       delay: 0
     - position: {x: 1, y: 0, z: 0}
       scale: {x: 1, y: 1, z: 5}
-      delay: 2.5
+      delay: 4
     - position: {x: -1, y: 0, z: 0}
       scale: {x: 1, y: 1, z: 5}
       delay: 0
     - position: {x: 0, y: 0, z: 0}
       scale: {x: 1, y: 1, z: 5}
-      delay: 2.5
+      delay: 4
   - patternName: Vertical right-left
-    isActive: 0
+    isActive: 1
     bricks:
     - position: {x: -3, y: 0, z: -0.6}
       scale: {x: 1, y: 1, z: 4}
       delay: 0.5
     - position: {x: -2, y: 0, z: 0}
       scale: {x: 1, y: 1, z: 5}
-      delay: 1.5
+      delay: 3
     - position: {x: -1, y: 0, z: 0}
       scale: {x: 1, y: 1, z: 5}
-      delay: 1.5
+      delay: 3
     - position: {x: 0, y: 0, z: 0}
       scale: {x: 1, y: 1, z: 5}
-      delay: 1.5
+      delay: 3
     - position: {x: 1, y: 0, z: 0}
       scale: {x: 1, y: 1, z: 5}
-      delay: 1.5
+      delay: 3
     - position: {x: 2, y: 0, z: 0}
       scale: {x: 1, y: 1, z: 5}
-      delay: 1.5
+      delay: 3
     - position: {x: 3, y: 0, z: -0.6}
       scale: {x: 1, y: 1, z: 4}
-      delay: 1.5
+      delay: 3
   - patternName: Vertical left-right
-    isActive: 0
+    isActive: 1
     bricks:
     - position: {x: 3, y: 0, z: -0.6}
       scale: {x: 1, y: 1, z: 4}
       delay: 0.5
     - position: {x: 2, y: 0, z: 0}
       scale: {x: 1, y: 1, z: 5}
-      delay: 1.5
+      delay: 3
     - position: {x: 1, y: 0, z: 0}
       scale: {x: 1, y: 1, z: 5}
-      delay: 1.5
+      delay: 3
     - position: {x: 0, y: 0, z: 0}
       scale: {x: 1, y: 1, z: 5}
-      delay: 1.5
+      delay: 3
     - position: {x: -1, y: 0, z: 0}
       scale: {x: 1, y: 1, z: 5}
-      delay: 1.5
+      delay: 3
     - position: {x: -2, y: 0, z: 0}
       scale: {x: 1, y: 1, z: 5}
-      delay: 1.5
+      delay: 3
     - position: {x: -3, y: 0, z: -0.6}
       scale: {x: 1, y: 1, z: 4}
-      delay: 1.5
+      delay: 3
   - patternName: Horizontal front-back
-    isActive: 0
+    isActive: 1
     bricks:
     - position: {x: 0, y: 0, z: -2}
       scale: {x: 7, y: 1, z: 1}
       delay: 0.5
     - position: {x: 0, y: 0, z: -1}
       scale: {x: 7, y: 1, z: 1}
-      delay: 2
+      delay: 4
     - position: {x: 0, y: 0, z: 0}
       scale: {x: 7, y: 1, z: 1}
-      delay: 2
+      delay: 4
     - position: {x: 0, y: 0, z: 1}
       scale: {x: 7, y: 1, z: 1}
-      delay: 2
+      delay: 4
     - position: {x: 0, y: 0, z: 2}
       scale: {x: 5, y: 1, z: 1}
-      delay: 2
+      delay: 4
   - patternName: Horizontal back-front
-    isActive: 0
+    isActive: 1
     bricks:
     - position: {x: 0, y: 0, z: 2}
       scale: {x: 5, y: 1, z: 1}
       delay: 0.5
     - position: {x: 0, y: 0, z: 1}
       scale: {x: 7, y: 1, z: 1}
-      delay: 2
+      delay: 4
     - position: {x: 0, y: 0, z: 0}
       scale: {x: 7, y: 1, z: 1}
-      delay: 2
+      delay: 4
     - position: {x: 0, y: 0, z: -1}
       scale: {x: 7, y: 1, z: 1}
-      delay: 2
+      delay: 4
     - position: {x: 0, y: 0, z: -2}
       scale: {x: 7, y: 1, z: 1}
-      delay: 2
+      delay: 4
   - patternName: Horizontal out-in
-    isActive: 0
+    isActive: 1
     bricks:
     - position: {x: 0, y: 0, z: -2}
       scale: {x: 7, y: 1, z: 1}
@@ -252,13 +252,13 @@ MonoBehaviour:
       delay: 0
     - position: {x: 0, y: 0, z: -1}
       scale: {x: 7, y: 1, z: 1}
-      delay: 2.5
+      delay: 4
     - position: {x: 0, y: 0, z: 1}
       scale: {x: 7, y: 1, z: 1}
       delay: 0
     - position: {x: 0, y: 0, z: 0}
       scale: {x: 7, y: 1, z: 1}
-      delay: 2.5
+      delay: 4
   - patternName: Horizontal in-out
     isActive: 1
     bricks:
@@ -267,13 +267,13 @@ MonoBehaviour:
       delay: 0.5
     - position: {x: 0, y: 0, z: -1}
       scale: {x: 7, y: 1, z: 1}
-      delay: 2.5
+      delay: 4
     - position: {x: 0, y: 0, z: 1}
       scale: {x: 7, y: 1, z: 1}
       delay: 0
     - position: {x: 0, y: 0, z: -2}
       scale: {x: 7, y: 1, z: 1}
-      delay: 2.5
+      delay: 4
     - position: {x: 0, y: 0, z: 2}
       scale: {x: 5, y: 1, z: 1}
       delay: 0

@@ -110,6 +110,7 @@ MonoBehaviour:
   canFire: 0
   currentAmmo: 5
   maxAmmo: 5
+  fixedY: 0.68
   audioSource: {fileID: 5380811825951380334}
   shootCannon: {fileID: 8300000, guid: 29fe670062968bb439b2440a6cc0a91d, type: 3}
 --- !u!114 &2483532118374656094

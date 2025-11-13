@@ -798,7 +798,7 @@ MonoBehaviour:
   lane2s: []
   lane3s: []
   brickSpawner: {fileID: 1368909274}
-  patternInterval: 10
+  patternInterval: 20
   Ammo: {fileID: 1410693692253306331, guid: 7f03aa7b2cb17534b9baa375ff1d1450, type: 3}
 --- !u!4 &602659313
 Transform:
@@ -1041,7 +1041,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2885154718105653229, guid: 3a9395ad8dca81f47aa0cdaa691092fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8
+      value: 1.59
       objectReference: {fileID: 0}
     - target: {fileID: 2885154718105653229, guid: 3a9395ad8dca81f47aa0cdaa691092fd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1626,15 +1626,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8635768593387770392, guid: 654bb2aee5bd08645a04831e0fca78e4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.92
+      value: -3.02
       objectReference: {fileID: 0}
     - target: {fileID: 8635768593387770392, guid: 654bb2aee5bd08645a04831e0fca78e4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8
+      value: 1.59
       objectReference: {fileID: 0}
     - target: {fileID: 8635768593387770392, guid: 654bb2aee5bd08645a04831e0fca78e4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.84
       objectReference: {fileID: 0}
     - target: {fileID: 8635768593387770392, guid: 654bb2aee5bd08645a04831e0fca78e4, type: 3}
       propertyPath: m_LocalRotation.w

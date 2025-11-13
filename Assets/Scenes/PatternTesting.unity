@@ -519,8 +519,18 @@ MonoBehaviour:
   - {fileID: 122247574}
   - {fileID: 1746443396}
   deck: {fileID: 1073429213}
+  cannon: {fileID: 0}
   emptyHeart: {fileID: 21300000, guid: a8351a6da2ca0fb4f892ccbfe8e5eba6, type: 3}
   loseScreen: {fileID: 1158662131}
+  maxAmmoText: {fileID: 0}
+  currentAmmoText: {fileID: 0}
+  crossHairUI: {fileID: 0}
+  lockCrossHair: {fileID: 0}
+  looseCrossHair: {fileID: 0}
+  moveSpeed: 0
+  timeToNewPos: 0
+  manualScale: {x: 1, y: 1}
+  manualOffset: {x: 0, y: 0}
 --- !u!114 &169638586
 MonoBehaviour:
   m_ObjectHideFlags: 0
