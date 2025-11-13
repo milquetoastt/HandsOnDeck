@@ -1335,6 +1335,10 @@ PrefabInstance:
       propertyPath: deck
       value: 
       objectReference: {fileID: 1073429213}
+    - target: {fileID: 4978444297262494506, guid: e58dff187351a1047800014d05d5d6dd, type: 3}
+      propertyPath: cannon
+      value: 
+      objectReference: {fileID: 1582246693}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 391831811974733738, guid: e58dff187351a1047800014d05d5d6dd, type: 3}
@@ -1715,7 +1719,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4720925903158585130, guid: 00c97a78612940243a58281c5bfd277d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.36
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 4720925903158585130, guid: 00c97a78612940243a58281c5bfd277d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1723,7 +1727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4720925903158585130, guid: 00c97a78612940243a58281c5bfd277d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.78
+      value: -2.88
       objectReference: {fileID: 0}
     - target: {fileID: 4720925903158585130, guid: 00c97a78612940243a58281c5bfd277d, type: 3}
       propertyPath: m_LocalRotation.w
