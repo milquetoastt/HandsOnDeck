@@ -12,6 +12,11 @@ public class EnemyShip : MonoBehaviour
     public List<Vector3> laneTargets = new List<Vector3>();
     public float fireSpeed = 10f;
 
+    public AudioSource audioSource;
+
+    public AudioClip deathSound;
+    public AudioClip sinkSound;
+
     public GameObject CannonFire;
     //public Transform target;
 
@@ -55,6 +60,7 @@ public class EnemyShip : MonoBehaviour
         if (playership != null)
         {
             RankChange();
+            audioSource.PlayOneShot(deathSound);
             Destroy(this.gameObject);
         }
 
@@ -63,6 +69,8 @@ public class EnemyShip : MonoBehaviour
         {
             Destroy(other.gameObject);
             RankChange();
+            audioSource.PlayOneShot(deathSound);
+            audioSource.PlayOneShot(sinkSound);
             Destroy(this.gameObject);
         }
     }
