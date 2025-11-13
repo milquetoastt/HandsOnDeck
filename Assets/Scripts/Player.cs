@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
     public bool alive;
-    private SpriteRenderer playerSprite;
+    public bool invisibility;
 
     [SerializeField] private SkinnedMeshRenderer faceRenderer;
     [SerializeField] private SkinnedMeshRenderer haloRenderer;
@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         alive = true;
-        playerSprite = GetComponent<SpriteRenderer>();
+        invisibility = false;
         materialInstance = faceRenderer.material;
 
         ChangeExpressionOffset(0.00f);
@@ -36,15 +36,20 @@ public class Player : MonoBehaviour
         ChangeExpressionOffset(0f);
         haloRenderer.enabled = false;
         alive = true;
+
+        StartCoroutine(InvincibilityFrames());
     }
 
     public void Die()
     {
-        Debug.Log("YouDied");
+        if (!invisibility)
+        {
+            Debug.Log("YouDied");
 
-        ChangeExpressionOffset(0.25f);
-        haloRenderer.enabled = true;
-        alive = false;
+            ChangeExpressionOffset(0.25f);
+            haloRenderer.enabled = true;
+            alive = false;
+        }
     }
 
     private void ChangeExpressionOffset(float Offset)
@@ -52,4 +57,11 @@ public class Player : MonoBehaviour
         materialInstance.mainTextureOffset = new Vector2(Offset, 0f);
     }
 
+    public IEnumerator InvincibilityFrames()
+    {
+        Debug.Log("Player is invinsible");
+        invisibility = true;
+        yield return new WaitForSeconds(2);
+        invisibility = false;
+    }
 }

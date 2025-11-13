@@ -38,7 +38,7 @@ public class RespawnPoint : MonoBehaviour
             var player = collision.GetComponent<Player>();
             if (respawnRoutine != null)
             {
-                Debug.Log("Player exited spawn. Stopping coroutine.");
+                //Debug.Log("Player exited spawn. Stopping coroutine.");
                 StopCoroutine(respawnRoutine);
                 countdownText.gameObject.SetActive(false);
                 respawnRoutine = null;
@@ -48,7 +48,7 @@ public class RespawnPoint : MonoBehaviour
 
     public IEnumerator Respawn(Player player)
     {
-        Debug.Log("Respawning...");
+        //Debug.Log("Respawning...");
       
         countdownText.gameObject.SetActive(true);
  
@@ -65,6 +65,7 @@ public class RespawnPoint : MonoBehaviour
 
         player.RespawnPlayer();
         respawnRoutine = null;
+        
 
     }
 }
