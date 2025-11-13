@@ -33,11 +33,16 @@ public class Cannon : MonoBehaviour
     }
     public bool AddAmmo(int pickUpAmmo)
     {
-        if (currentAmmo != maxAmmo)
+        if (currentAmmo < maxAmmo)
         {
             currentAmmo+=pickUpAmmo;
+            if (currentAmmo >= maxAmmo){currentAmmo = maxAmmo;}
             return true;
         }
             return false;
     }
+
+    public int GetCurrentAmmo(){return currentAmmo;}
+    public int GetMaxAmmo(){return maxAmmo; }
+
 }

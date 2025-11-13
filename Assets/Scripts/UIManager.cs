@@ -2,21 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
     //List<GameObject> heart = new List<GameObject>();
     public GameObject[] heart = new GameObject[10];
     public PlayerShip deck;
+    public Cannon cannon; 
     int numHearts;
 
     public Sprite emptyHeart;
 
     public GameObject loseScreen;
+
+    public TMP_Text maxAmmoText;
+    public TMP_Text currentAmmoText;
     // Start is called before the first frame update
     void Start()
     {
-        //NEED TO ADD instanciate hearts
+        maxAmmoText.text = cannon.GetMaxAmmo().ToString();
     }
 
     // Update is called once per frame
@@ -35,6 +40,8 @@ public class UIManager : MonoBehaviour
             loseScreen.SetActive(true);
             Time.timeScale = 0;
         }
+
+        currentAmmoText.text = cannon.GetCurrentAmmo().ToString();
 
     }
 }
