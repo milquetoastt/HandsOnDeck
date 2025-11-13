@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
     public float patternInterval = 10f; // time between pattern drops
 
     private List<int> availablePatterns = new List<int>();
-    private int totalPatterns;
 
     public GameObject Ammo;
     private Vector3 spawnPos;
@@ -30,7 +29,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        totalPatterns = brickSpawner.GetPatternCount();
         ResetPatternPool();
         StartCoroutine(PatternDropLoop());
         StartCoroutine(SpawnAShip());
@@ -109,11 +107,22 @@ public class GameManager : MonoBehaviour
     private void ResetPatternPool()
     {
         availablePatterns.Clear();
-        for (int i = 0; i < totalPatterns; i++)
+
+        // add only active patterns to the pool
+        for (int i = 0; i < brickSpawner.patterns.Count; i++)
         {
-            availablePatterns.Add(i);
+            if (brickSpawner.patterns[i].isActive)
+            {
+                availablePatterns.Add(i);
+            }
         }
-        Debug.Log("Pattern pool reset");
+
+        if (availablePatterns.Count == 0)
+        {
+            Debug.LogError("no active patterns in BrickSpawner! Enable at least one.");
+        }
+
+        Debug.Log("pattern pool reset (active patterns only)");
     }
 
     private IEnumerator SpawnAmmo()

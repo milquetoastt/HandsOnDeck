@@ -14,6 +14,7 @@ public struct TimedBrickPattern
 public class BrickPattern
 {
     public string patternName;
+    public bool isActive = true;
     public List<TimedBrickPattern> bricks;
 }
 
@@ -23,7 +24,7 @@ public class BrickSpawner : MonoBehaviour
     public FallingBrickj brickPrefab;
     public List<BrickPattern> patterns = new List<BrickPattern>();
 
-    // Spawns a chosen pattern by index or name
+    // spawns a chosen pattern by index or name
     public void SpawnPattern(int patternIndex)
     {
         if (patternIndex < 0 || patternIndex >= patterns.Count)
@@ -49,7 +50,31 @@ public class BrickSpawner : MonoBehaviour
         FallingBrickj newBrick = Instantiate(brickPrefab, position, Quaternion.identity);
         newBrick.transform.localScale = scale;
     }
+    public int GetPatternCount()
+    {
+        int count = 0;
+        foreach (var pattern in patterns)
+        {
+            if (pattern.isActive)
+                count++;
+        }
+        return count;
+    }
+    public int ConvertActiveIndexToActualIndex(int activeIndex)
+    {
+        int seen = 0;
+        for (int i = 0; i < patterns.Count; i++)
+        {
+            if (!patterns[i].isActive)
+                continue;
 
-    // Optionally get number of patterns for external scripts
-    public int GetPatternCount() => patterns.Count;
+            if (seen == activeIndex)
+                return i;
+
+            seen++;
+        }
+
+        Debug.LogError("invalid active pattern index: " + activeIndex);
+        return -1;
+    }
 }

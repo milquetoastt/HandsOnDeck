@@ -96,12 +96,14 @@ public class FallingBrickj : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter(Collider collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            var player = collision.GetComponent<Player>();
-            player.Die();
-        }
-    }
+    //private void OnTriggerEnter(Collider collision)
+    //{
+    //    Debug.Log("Brick hit something", collision);
+    //    Player player = collision.gameObject.GetComponent<Player>();
+    //    if (player != null)
+    //    {
+    //        //Debug.Log("player ran into death spot");
+    //        player.Die();
+    //    }
+    //}
 }
