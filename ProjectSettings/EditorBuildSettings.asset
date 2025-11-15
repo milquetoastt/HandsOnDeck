@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Scene/Tutorial.unity
     guid: 18e8873c87861724ca7f5b396cdb3f7a
   - enabled: 1
-    path: Assets/Scenes/Main Scene 1.unity
+    path: Assets/Scenes/Main Scene OldDeckPosition.unity
     guid: 1dc7a16f07e905e44bf51a1c1c1d4739
   - enabled: 1
     path: Assets/Scenes/Main Scene EditDeck.unity
