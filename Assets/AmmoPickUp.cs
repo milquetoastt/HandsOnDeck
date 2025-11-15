@@ -7,6 +7,9 @@ public class AmmoPickUp : MonoBehaviour
     Cannon cannon;
     public int addAmmo;
 
+    private AudioSource audioSource;
+    public AudioClip ammoPickUpSound;
+
     void Start()
     {
         cannonObject = GameObject.FindGameObjectWithTag("Cannon");
@@ -20,6 +23,10 @@ public class AmmoPickUp : MonoBehaviour
         {
             if (cannon.AddAmmo(addAmmo))
             {
+                if (ammoPickUpSound != null)
+                {
+                    AudioSource.PlayClipAtPoint(ammoPickUpSound, transform.position);
+                }
                 Destroy(gameObject);
             }
         }
