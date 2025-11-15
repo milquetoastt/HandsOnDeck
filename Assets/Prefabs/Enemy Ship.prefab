@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1682049521735526422}
   - component: {fileID: 648154043998492820}
   - component: {fileID: 9023687131889368466}
+  - component: {fileID: 2203758105590854129}
   m_Layer: 4
   m_Name: Enemy Ship
   m_TagString: Untagged
@@ -75,13 +76,14 @@ MonoBehaviour:
   lane: 0
   laneStartCoords:
   - {x: 14, y: 0, z: -19}
-  - {x: 0, y: 0, z: -19}
+  - {x: 0, y: 0, z: -23}
   - {x: -14, y: 0, z: -19}
   laneTargets:
   - {x: 3.5, y: 0.13, z: -5.5}
   - {x: 0, y: 0.13, z: -5.5}
   - {x: -3.5, y: 0.13, z: -5.5}
   fireSpeed: 15
+  warningOutline: {fileID: 2203758105590854129}
   audioSource: {fileID: 9023687131889368466}
   deathSound: {fileID: 8300000, guid: fc36ced52f021ef44a53fe5fd3a94d32, type: 3}
   sinkSound: {fileID: 8300000, guid: 2e2ae1014db06b24e8ed168af44e0a57, type: 3}
@@ -225,6 +227,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2203758105590854129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3992203497840435111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13a164491846f1b4fa984848fd482d00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 0.01
 --- !u!1 &5413589643392966086
 GameObject:
   m_ObjectHideFlags: 0

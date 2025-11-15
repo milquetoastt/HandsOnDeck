@@ -11,7 +11,7 @@ public class EnemyShip : MonoBehaviour
     public List<Vector3> laneStartCoords = new List<Vector3>();
     public List<Vector3> laneTargets = new List<Vector3>();
     public float fireSpeed = 10f;
-
+    public MultiRendererOutline warningOutline;
     public AudioSource audioSource;
 
     public AudioClip deathSound;
@@ -26,11 +26,29 @@ public class EnemyShip : MonoBehaviour
     {
         lane = Random.Range(1, 4);
         transform.position = laneStartCoords[lane-1];
+        
     }
     void Start()
     {
         //Debug.Log("This ship will spawn in lane " + lane);
         //StartCoroutine(EnemyFireCoroutine());  <- OLD METHOD. UNCOMMENT TO USE OLD CANNONBALL SYSTEM
+        StartCoroutine(StartLightCoroutine());
+    }
+
+    private IEnumerator StartLightCoroutine()
+    {
+        
+        yield return new WaitForSeconds(13f);
+        warningOutline.ToggleOutline();
+        StartCoroutine(FlashyCoroutine());
+    }
+
+    private IEnumerator FlashyCoroutine()
+    {
+        Debug.Log("turnin on da lights here");
+        yield return new WaitForSeconds(1f);
+        warningOutline.ToggleOutline();
+        StartCoroutine(FlashyCoroutine());
     }
 
     //if health is 0, destroy ship
@@ -38,12 +56,12 @@ public class EnemyShip : MonoBehaviour
     {
         if (health <= 0)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         
     }
 
-    void FixedUpdate()
+    void FixedUpdate(   )
     {
         //ship moves down a lane
         transform.position = Vector3.MoveTowards(
@@ -59,6 +77,7 @@ public class EnemyShip : MonoBehaviour
         PlayerShip playership = other.GetComponent<PlayerShip>();
         if (playership != null)
         {
+            FindFirstObjectByType<ScreenShake>().Shake(0.25f, 0.4f, 30f);
             RankChange();
             //audioSource.PlayOneShot(deathSound);
             AudioSource.PlayClipAtPoint(deathSound, transform.position);

@@ -8,7 +8,8 @@ public class FallingBrickj : MonoBehaviour
     public float fallSpeed = 10f;
     public float startHeight = 20f;
     public float groundY = 0f;
-
+    public GameObject explosionPrefab;
+    public float destroyDelay = 0.05f;
 
     public Transform shadowTransform;
     public Renderer shadowRenderer; // works with 3D plane or quad
@@ -46,7 +47,9 @@ public class FallingBrickj : MonoBehaviour
         if (transform.position.y <= groundY)
         {
             transform.position = new Vector3(transform.position.x, groundY, transform.position.z);
+            Instantiate(explosionPrefab, transform.position, Quaternion.LookRotation(Vector3.up));
 
+            //Destroy(gameObject, destroyDelay);
             // optional: small delay before cleanup (so you can see it land)
             StartCoroutine(DestroyAfterDelay(0.1f));
 
