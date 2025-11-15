@@ -22,7 +22,6 @@ public class CannonAimer : MonoBehaviour
         float effectiveSpeed = cannon.launchVelocity * Time.fixedDeltaTime / cannon.projectile.GetComponent<Rigidbody>().mass;
         if (target == null || cannon.firepoint == null) return;
 
-        // Solve for the direction the firepoint should face
         Vector3 start = cannon.firepoint.position;
         Vector3 end = target.position;
 
@@ -32,9 +31,6 @@ public class CannonAimer : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Compute rotation so AddRelativeForce(x=launchVelocity) hits target with gravity.
-    /// </summary>
     private bool SolveAimRotation(Vector3 start, Vector3 target, float speed, float gravityY, bool highArc, out Quaternion rot)
     {
         rot = Quaternion.identity;

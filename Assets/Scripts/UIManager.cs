@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     private Camera mainCamera;
     public GameObject[] heart = new GameObject[10];
     public PlayerShip deck;
-    public Cannon cannon; 
+    public Cannon cannon;
     int numHearts;
 
     public Sprite emptyHeart;
@@ -25,10 +25,13 @@ public class UIManager : MonoBehaviour
     public Sprite lockCrossHair;
     public Sprite looseCrossHair;
     public float moveSpeed;
-    public float timeToNewPos;
 
     //RectTransform of crosshair
     private RectTransform crossHairRectTransform;
+
+    [Header("Rotation Aiming Control")]
+    public float maxAngleY = 45f;//left and right
+    public float maxAngleZ = 30f;//upndown
     public Vector2 manualScale = new Vector2(1f, 1f);
     public Vector2 manualOffset = new Vector2(0f, 0f);
 
@@ -44,13 +47,12 @@ public class UIManager : MonoBehaviour
         crossHairRectTransform = crossHairUI.GetComponent<Image>().rectTransform;
         canvasRectTransform = GetComponent<RectTransform>();
         CalculateBounds();
-        StartCoroutine(Wander());
     }
 
     void Update()
     {
         numHearts = deck.GetHealth() / 10;
-        if (numHearts < 10) 
+        if (numHearts < 10)
         {
             heart[numHearts].GetComponent<Image>().sprite = emptyHeart;
         }
@@ -64,6 +66,42 @@ public class UIManager : MonoBehaviour
         currentAmmoText.text = cannon.GetCurrentAmmo().ToString();
     }
 
+
+    void LateUpdate()
+    {
+        if (cannon == null) return;
+
+        if (cannon.canFire)
+        {
+            crossHairUI.SetActive(true);
+            crossHairUI.GetComponent<Image>().sprite = lockCrossHair;
+
+            Vector3 localEuler = cannon.transform.localEulerAngles;
+            float rotY = localEuler.y > 180 ? localEuler.y - 360 : localEuler.y;
+            float rotZ = localEuler.z > 180 ? localEuler.z - 360 : localEuler.z;
+            float xPercent = Mathf.Clamp(rotY, -maxAngleY, maxAngleY) / maxAngleY;
+            float yPercent = Mathf.Clamp(rotZ, -maxAngleZ, maxAngleZ) / maxAngleZ;
+            float targetX = xPercent * maxX;
+            float targetY = yPercent * maxY;
+
+            targetPosition.x = (targetX * manualScale.x) + manualOffset.x;
+            targetPosition.y = (targetY * manualScale.y) + manualOffset.y;
+
+            targetPosition.x = Mathf.Clamp(targetPosition.x, minX, maxX);
+            targetPosition.y = Mathf.Clamp(targetPosition.y, minY, maxY);
+
+            crossHairRectTransform.anchoredPosition = Vector2.Lerp(
+                crossHairRectTransform.anchoredPosition,
+                targetPosition,
+                moveSpeed * Time.deltaTime
+            
+            );
+        }
+        else if (!cannon.canFire)
+        {
+            crossHairUI.SetActive(false);
+        }
+    }
     void CalculateBounds()
     {
         //float canvasWidth = canvasRectTransform.rect.width;
@@ -79,83 +117,6 @@ public class UIManager : MonoBehaviour
         maxX = (canvasWidth / 2) - (imageWidth / 2);
         minY = -(canvasHeight / 2) + (imageHeight / 2);
         maxY = (canvasHeight / 2) - (imageHeight / 2);
-    }
-
-    IEnumerator Wander()
-    {
-        while (true)
-        {
-            int randomEdge = Random.Range(0, 4);
-            if (cannon.GetComponent<CannonAimer>().GetNumberLane() != 0)
-            {
-                if (cannon.GetComponent<CannonAimer>().target == null)
-                {
-                    randomScreenPositon(randomEdge);
-                }
-                else
-                {
-                    crossHairUI.GetComponent<Image>().sprite = lockCrossHair;
-
-                    Vector3 laneposition = cannon.GetComponent<CannonAimer>().target.position;
-                    Vector3 screenPosition = mainCamera.WorldToScreenPoint(laneposition);
-
-                    Vector2 localPos;
-
-                    Camera eventCamera = (GetComponent<Canvas>().renderMode == RenderMode.ScreenSpaceOverlay) ? null : mainCamera;
-                    RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                        canvasRectTransform,
-                        screenPosition,
-                        eventCamera,
-                        out localPos
-                    );
-
-
-                    localPos.x = (localPos.x * manualScale.x) + manualOffset.x;
-                    localPos.y = (localPos.y * manualScale.y) + manualOffset.y;
-
-                    targetPosition = localPos;
-                }
-
-            }
-            else 
-            {
-                randomScreenPositon(randomEdge);
-            }
-
-            while (Vector2.Distance(crossHairRectTransform.anchoredPosition, targetPosition) > 1f)
-            {
-                crossHairRectTransform.anchoredPosition = Vector2.MoveTowards(
-                    crossHairRectTransform.anchoredPosition,
-                    targetPosition,
-                    moveSpeed * Time.deltaTime
-                );
-
-                yield return null;
-            }
-
-            yield return new WaitForSeconds(timeToNewPos);
-        }
-    }
-
-    void randomScreenPositon(int randomEdge)
-    {
-        crossHairUI.GetComponent<Image>().sprite = looseCrossHair;
-
-        switch (randomEdge)
-        {
-            case 0: // Top Edge
-                targetPosition = new Vector2(Random.Range(minX, maxX), maxY);
-                break;
-            case 1: // Bottom Edge
-                targetPosition = new Vector2(Random.Range(minX, maxX), minY);
-                break;
-            case 2: // Left Edge
-                targetPosition = new Vector2(minX, Random.Range(minY, maxY));
-                break;
-            case 3: // Right Edge
-                targetPosition = new Vector2(maxX, Random.Range(minY, maxY));
-                break;
-        }
     }
 }
 
