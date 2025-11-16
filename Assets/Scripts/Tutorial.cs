@@ -20,7 +20,10 @@ public class Tutorial : MonoBehaviour
     public Cannon cannon;
 
 
-    public TMP_Text tutorialText; 
+    public TMP_Text tutorialText;
+
+    public LevelLoader levelLoader;
+
     public enum TutorialStep
     {
         Start,
@@ -44,6 +47,8 @@ public class Tutorial : MonoBehaviour
         arrow1.SetActive(true);
         arrow2.SetActive(true);
         shootArrow.SetActive(false);
+
+        levelLoader = GameObject.Find("SceneLoader").GetComponent<LevelLoader>();
 
         //GameManager.Instance.StopSpawning();
     }
@@ -105,7 +110,6 @@ public class Tutorial : MonoBehaviour
     public IEnumerator startGame()
     {
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
-        //load next scene
+        levelLoader.LoadSceneLevel(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

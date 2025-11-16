@@ -1337,6 +1337,7 @@ MonoBehaviour:
   maxAngleZ: 30
   manualScale: {x: 3, y: 3}
   manualOffset: {x: -1164, y: -81}
+  levelLoader: {fileID: 0}
 --- !u!1 &4088375542863050885
 GameObject:
   m_ObjectHideFlags: 0

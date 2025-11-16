@@ -41,6 +41,8 @@ public class UIManager : MonoBehaviour
     private Vector2 targetPosition;
     private float minX, maxX, minY, maxY;
 
+    public LevelLoader levelLoader;
+
     void Start()
     {
         mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
@@ -48,6 +50,8 @@ public class UIManager : MonoBehaviour
         maxAmmoText.text = cannon.GetMaxAmmo().ToString();
         crossHairRectTransform = crossHairUI.GetComponent<Image>().rectTransform;
         canvasRectTransform = GetComponent<RectTransform>();
+        levelLoader = GameObject.Find("SceneLoader").GetComponent<LevelLoader>();
+
         CalculateBounds();
     }
 
@@ -55,7 +59,8 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetKeyDown("r"))
         {
-            SceneManager.LoadScene(0);
+            levelLoader.LoadSceneLevel(0);
+            
         }
         numHearts = deck.GetHealth() / 10;
         if (numHearts < 10)
@@ -63,7 +68,7 @@ public class UIManager : MonoBehaviour
             heart[numHearts].GetComponent<Image>().sprite = emptyHeart;
         }
 
-        if (deck.GetHealth() == 0)
+        if (deck.GetHealth() <= 0 && loseScreen.activeInHierarchy == false)
         {
             loseScreen.SetActive(true);
             AmmoCounter.SetActive(false);
@@ -74,11 +79,11 @@ public class UIManager : MonoBehaviour
                 heart[x].SetActive(false);
             }
 
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+           
+        }else if (Input.GetKeyDown(KeyCode.Space) && loseScreen.activeInHierarchy == true)
+        {
                 Time.timeScale = 1;
-            }
+                LoadLevelAgain();
         }
 
         currentAmmoText.text = cannon.GetCurrentAmmo().ToString();
@@ -135,6 +140,11 @@ public class UIManager : MonoBehaviour
         maxX = (canvasWidth / 2) - (imageWidth / 2);
         minY = -(canvasHeight / 2) + (imageHeight / 2);
         maxY = (canvasHeight / 2) - (imageHeight / 2);
+    }
+
+    private void LoadLevelAgain()
+    {
+        StartCoroutine(levelLoader.LoadLevel(SceneManager.GetActiveScene().buildIndex));
     }
 }
 

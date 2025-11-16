@@ -14,15 +14,11 @@ public class PlayerShip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
-        {
-            Debug.Log("players lose!");
-        }
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("Player ship hit something");
         EnemyShip enemyShip = other.GetComponent<EnemyShip>();
         if (enemyShip != null)
         {
