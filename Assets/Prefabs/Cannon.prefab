@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 5393165010888532512}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.526, y: 0.241, z: 0.006}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -110,7 +110,6 @@ MonoBehaviour:
   canFire: 0
   currentAmmo: 5
   maxAmmo: 5
-  fixedY: 0.68
   audioSource: {fileID: 5380811825951380334}
   shootCannon: {fileID: 8300000, guid: 29fe670062968bb439b2440a6cc0a91d, type: 3}
 --- !u!114 &2483532118374656094
