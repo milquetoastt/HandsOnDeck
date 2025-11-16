@@ -105,7 +105,7 @@ public class Tutorial : MonoBehaviour
     public IEnumerator startGame()
     {
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
         //load next scene
     }
 }
