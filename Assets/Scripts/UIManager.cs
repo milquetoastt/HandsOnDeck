@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject loseScreen;
 
+    public GameObject AmmoCounter;
     public TMP_Text maxAmmoText;
     public TMP_Text currentAmmoText;
 
@@ -63,6 +64,11 @@ public class UIManager : MonoBehaviour
         if (deck.GetHealth() == 0)
         {
             loseScreen.SetActive(true);
+            for (int x = 0; x < 11; x++)
+            {
+                heart[x].SetActive(false);
+            }
+            AmmoCounter.SetActive(false);
             Time.timeScale = 0;
         }
 
