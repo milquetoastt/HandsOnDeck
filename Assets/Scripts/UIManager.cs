@@ -64,12 +64,19 @@ public class UIManager : MonoBehaviour
         if (deck.GetHealth() == 0)
         {
             loseScreen.SetActive(true);
-            for (int x = 0; x < 11; x++)
+            AmmoCounter.SetActive(false);
+            Time.timeScale = 0;
+
+            for (int x = 0; x < 10; x++)
             {
                 heart[x].SetActive(false);
             }
-            AmmoCounter.SetActive(false);
-            Time.timeScale = 0;
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                Time.timeScale = 1;
+            }
         }
 
         currentAmmoText.text = cannon.GetCurrentAmmo().ToString();
