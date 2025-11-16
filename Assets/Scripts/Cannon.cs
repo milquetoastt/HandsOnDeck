@@ -6,7 +6,7 @@ public class Cannon : MonoBehaviour
 {
     public GameObject projectile;
     public Transform firepoint;
-    public float fixedY = 0f;
+    public float fixedY = 0.68f;
     public float launchVelocity = 700f;
     private Vector3 offset = new Vector3(0, 2f, 0);
     public bool canFire = false;

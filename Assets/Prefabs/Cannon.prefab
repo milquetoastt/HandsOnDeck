@@ -106,6 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 4592536597086601352, guid: 7a5b07f4002bc364f914d888989d9567, type: 3}
   firepoint: {fileID: 4811810518163281542}
+  fixedY: 0.68
   launchVelocity: 25
   canFire: 0
   currentAmmo: 5

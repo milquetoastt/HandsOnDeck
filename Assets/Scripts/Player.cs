@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
     public bool alive;
     public bool invisibility;
 
@@ -25,12 +24,10 @@ public class Player : MonoBehaviour
 
         ChangeExpressionOffset(0.00f);
         haloRenderer.enabled = false;
-        // Lock down the initial X/Z rotation from the starting transform
         lockedRotX = transform.rotation.eulerAngles.x;
         lockedRotZ = transform.rotation.eulerAngles.z;
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -38,22 +35,18 @@ public class Player : MonoBehaviour
 
     void LateUpdate()
     {
-        // --- 1. Freeze Y position ---
         Vector3 p = transform.position;
         p.y = fixedY;
         transform.position = p;
 
-        // --- 2. Freeze X and Z rotation ---
         Vector3 e = transform.rotation.eulerAngles;
         e.x = lockedRotX;
         e.z = lockedRotZ;
         transform.rotation = Quaternion.Euler(e);
     }
 
-    public void RespawnPlayer() //StartCoroutine(RespawnPlayer());
+    public void RespawnPlayer() 
     {
-        Debug.Log("Player Respawn");
-
         ChangeExpressionOffset(0f);
         haloRenderer.enabled = false;
         alive = true;
@@ -65,8 +58,6 @@ public class Player : MonoBehaviour
     {
         if (!invisibility)
         {
-            Debug.Log("YouDied");
-
             ChangeExpressionOffset(0.25f);
             haloRenderer.enabled = true;
             alive = false;
@@ -80,7 +71,6 @@ public class Player : MonoBehaviour
 
     public IEnumerator InvincibilityFrames()
     {
-        Debug.Log("Player is invinsible");
         invisibility = true;
         yield return new WaitForSeconds(2);
         invisibility = false;
