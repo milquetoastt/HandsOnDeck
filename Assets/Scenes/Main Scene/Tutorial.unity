@@ -936,6 +936,8 @@ MonoBehaviour:
   brickSpawner: {fileID: 0}
   patternInterval: 10
   Ammo: {fileID: 0}
+  points: 0
+  numDead: 0
 --- !u!1 &650196974
 GameObject:
   m_ObjectHideFlags: 0
