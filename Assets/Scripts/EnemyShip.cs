@@ -18,6 +18,8 @@ public class EnemyShip : MonoBehaviour
     public AudioClip deathSound;
     public AudioClip sinkSound;
 
+    public GameObject explosionShipPrefab;
+
     public GameObject CannonFire;
     //public Transform target;
 
@@ -68,7 +70,7 @@ public class EnemyShip : MonoBehaviour
             Destroy(this.gameObject);
         }
         elapsed += Time.deltaTime;
-        Debug.Log(elapsed);
+        //Debug.Log(elapsed);
     }
 
     void FixedUpdate(   )
@@ -88,6 +90,7 @@ public class EnemyShip : MonoBehaviour
         if (playership != null)
         {
             FindFirstObjectByType<ScreenShake>().Shake(0.25f, 0.4f, 30f);
+            Instantiate(explosionShipPrefab, transform.position, transform.rotation);
             RankChange();
             //audioSource.PlayOneShot(deathSound);
             AudioSource.PlayClipAtPoint(deathSound, transform.position);
@@ -99,6 +102,7 @@ public class EnemyShip : MonoBehaviour
         {
             //audioSource.PlayOneShot(deathSound);
             //audioSource.PlayOneShot(sinkSound);
+            Instantiate(explosionShipPrefab, transform.position, transform.rotation);
             GameManager.Instance.UpCounter();
             if (elapsed < 10)
             {
