@@ -85,6 +85,7 @@ MonoBehaviour:
   fireSpeed: 15
   warningOutline: {fileID: 2203758105590854129}
   audioSource: {fileID: 9023687131889368466}
+  elapsed: 0
   deathSound: {fileID: 8300000, guid: fc36ced52f021ef44a53fe5fd3a94d32, type: 3}
   sinkSound: {fileID: 8300000, guid: 2e2ae1014db06b24e8ed168af44e0a57, type: 3}
   CannonFire: {fileID: 4592536597086601352, guid: 7606c74bd94fe474f86e1a2caa4bc836, type: 3}
@@ -240,7 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 0.01
+  outlineWidth: 0.007
 --- !u!1 &5413589643392966086
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,234 +46,987 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brickPrefab: {fileID: 4217201127108295909, guid: e76555d2fb16ff74d93db3ee4a897e68, type: 3}
   patterns:
-  - patternName: OLDVertical out-in
+  - patternName: OLDVertical in-out
     isActive: 0
     bricks:
-    - position: {x: 3, y: 0, z: 0}
-      scale: {x: 1.5, y: 1, z: 5}
-      delay: 0
-    - position: {x: -3, y: 0, z: 0}
-      scale: {x: 1.5, y: 1, z: 5}
-      delay: 0
-    - position: {x: 1.5, y: 0, z: 0}
-      scale: {x: 1.5, y: 1, z: 5}
-      delay: 2
-    - position: {x: -1.5, y: 0, z: 0}
-      scale: {x: 1.5, y: 1, z: 5}
-      delay: 0
-    - position: {x: 0, y: 0, z: 0}
-      scale: {x: 1.5, y: 1, z: 5}
-      delay: 2
-  - patternName: OLDHorizontal out-in
-    isActive: 0
-    bricks:
-    - position: {x: 0, y: 0, z: 1.9875}
-      scale: {x: 7, y: 1, z: 1.325}
-      delay: 0
-    - position: {x: 0, y: 0, z: -1.9875}
-      scale: {x: 7, y: 1, z: 1.325}
-      delay: 0
-    - position: {x: 0, y: 0, z: 0.6625}
-      scale: {x: 7, y: 1, z: 1.325}
-      delay: 2
-    - position: {x: 0, y: 0, z: -0.6625}
-      scale: {x: 7, y: 1, z: 1.325}
-      delay: 0
-  - patternName: OLDHorizontal front-back
-    isActive: 0
-    bricks:
-    - position: {x: 0, y: 0, z: -1.9875}
-      scale: {x: 7, y: 1, z: 1.325}
-      delay: 0
-    - position: {x: 0, y: 0, z: -0.6625}
-      scale: {x: 7, y: 1, z: 1.325}
-      delay: 2
-    - position: {x: 0, y: 0, z: 0.6625}
-      scale: {x: 7, y: 1, z: 1.325}
-      delay: 2
-    - position: {x: 0, y: 0, z: 1.9875}
-      scale: {x: 7, y: 1, z: 1.325}
-      delay: 2
-  - patternName: OLDHorizontal back-front
-    isActive: 0
-    bricks:
-    - position: {x: 0, y: 0, z: 1.9875}
-      scale: {x: 7, y: 1, z: 1.325}
-      delay: 0
-    - position: {x: 0, y: 0, z: 0.6625}
-      scale: {x: 7, y: 1, z: 1.325}
-      delay: 2
-    - position: {x: 0, y: 0, z: -0.6625}
-      scale: {x: 7, y: 1, z: 1.325}
-      delay: 2
-    - position: {x: 0, y: 0, z: -1.9875}
-      scale: {x: 7, y: 1, z: 1.325}
-      delay: 2
-  - patternName: Vertical in-out
-    isActive: 1
-    bricks:
-    - position: {x: 0, y: 0, z: 0}
+    - position: {x: 0, y: 0, z: -0.85}
       scale: {x: 1, y: 1, z: 5}
       delay: 0
-    - position: {x: 1, y: 0, z: 1.9875}
+    - position: {x: 1, y: 0, z: 1.1375}
       scale: {x: 1, y: 1, z: 5}
       delay: 4
-    - position: {x: -1, y: 0, z: 1.9875}
+    - position: {x: -1, y: 0, z: 1.1375}
       scale: {x: 1, y: 1, z: 5}
       delay: 0
-    - position: {x: -2, y: 0, z: 1.9875}
+    - position: {x: -2, y: 0, z: 1.1375}
       scale: {x: 1, y: 1, z: 5}
       delay: 4
     - position: {x: 2, y: 0, z: 1.9875}
       scale: {x: 1, y: 1, z: 5}
       delay: 0
-    - position: {x: 3, y: 0, z: -0.6}
+    - position: {x: 3, y: 0, z: -1.45}
       scale: {x: 1, y: 1, z: 4}
       delay: 4
+    - position: {x: -3, y: 0, z: -1.45}
+      scale: {x: 1, y: 1, z: 4}
+      delay: 2
+  - patternName: OLDVertical out-in
+    isActive: 0
+    bricks:
     - position: {x: -3, y: 0, z: -0.6}
       scale: {x: 1, y: 1, z: 4}
+      delay: 0.5
+    - position: {x: 3, y: 0, z: -0.6}
+      scale: {x: 1, y: 1, z: 4}
+      delay: 0
+    - position: {x: -2, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 5}
+      delay: 4
+    - position: {x: 2, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 5}
+      delay: 0
+    - position: {x: 1, y: 0, z: -0.6625}
+      scale: {x: 1, y: 1, z: 5}
+      delay: 4
+    - position: {x: -1, y: 0, z: -0.6625}
+      scale: {x: 1, y: 1, z: 5}
+      delay: 0
+    - position: {x: 0, y: 0, z: -0.6625}
+      scale: {x: 1, y: 1, z: 5}
+      delay: 4
+  - patternName: OLDVertical right-left
+    isActive: 0
+    bricks:
+    - position: {x: -3, y: 0, z: -0.6}
+      scale: {x: 1, y: 1, z: 4}
+      delay: 0.5
+    - position: {x: -2, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 5}
+      delay: 3
+    - position: {x: -1, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 5}
+      delay: 3
+    - position: {x: 0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 5}
+      delay: 3
+    - position: {x: 1, y: 0, z: 1.9875}
+      scale: {x: 1, y: 1, z: 5}
+      delay: 3
+    - position: {x: 2, y: 0, z: 1.9875}
+      scale: {x: 1, y: 1, z: 5}
+      delay: 3
+    - position: {x: 3, y: 0, z: -0.6}
+      scale: {x: 1, y: 1, z: 4}
+      delay: 3
+  - patternName: OLDVertical left-right
+    isActive: 0
+    bricks:
+    - position: {x: 3, y: 0, z: -0.6}
+      scale: {x: 1, y: 1, z: 4}
+      delay: 0.5
+    - position: {x: 2, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 5}
+      delay: 3
+    - position: {x: 1, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 5}
+      delay: 3
+    - position: {x: 0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 5}
+      delay: 3
+    - position: {x: -1, y: 0, z: -1.9875}
+      scale: {x: 1, y: 1, z: 5}
+      delay: 3
+    - position: {x: -2, y: 0, z: -1.9875}
+      scale: {x: 1, y: 1, z: 5}
+      delay: 3
+    - position: {x: -3, y: 0, z: -0.6}
+      scale: {x: 1, y: 1, z: 4}
+      delay: 3
+  - patternName: OLDHorizontal front-back
+    isActive: 0
+    bricks:
+    - position: {x: 0, y: 0, z: -0.85}
+      scale: {x: 7, y: 1, z: 1}
+      delay: 0.5
+    - position: {x: 0, y: 0, z: 1.1375}
+      scale: {x: 7, y: 1, z: 1}
+      delay: 4
+    - position: {x: 0, y: 0, z: 1.1375}
+      scale: {x: 7, y: 1, z: 1}
+      delay: 4
+    - position: {x: 0, y: 0, z: 1.1375}
+      scale: {x: 7, y: 1, z: 1}
+      delay: 4
+    - position: {x: 0, y: 0, z: 2}
+      scale: {x: 5, y: 1, z: 1}
+      delay: 4
+  - patternName: OLDHorizontal back-front
+    isActive: 0
+    bricks:
+    - position: {x: 0, y: 0, z: 2}
+      scale: {x: 5, y: 1, z: 1}
+      delay: 0.5
+    - position: {x: 0, y: 0, z: 1}
+      scale: {x: 7, y: 1, z: 1}
+      delay: 4
+    - position: {x: 0, y: 0, z: 0}
+      scale: {x: 7, y: 1, z: 1}
+      delay: 4
+    - position: {x: 0, y: 0, z: -1}
+      scale: {x: 7, y: 1, z: 1}
+      delay: 4
+    - position: {x: 0, y: 0, z: -2}
+      scale: {x: 7, y: 1, z: 1}
+      delay: 4
+  - patternName: OLDHorizontal out-in
+    isActive: 0
+    bricks:
+    - position: {x: 0, y: 0, z: -2}
+      scale: {x: 7, y: 1, z: 1}
+      delay: 0.5
+    - position: {x: 0, y: 0, z: 2}
+      scale: {x: 5, y: 1, z: 1}
+      delay: 0
+    - position: {x: 0, y: 0, z: -1}
+      scale: {x: 7, y: 1, z: 1}
+      delay: 4
+    - position: {x: 0, y: 0, z: 1}
+      scale: {x: 7, y: 1, z: 1}
+      delay: 0
+    - position: {x: 0, y: 0, z: 0}
+      scale: {x: 7, y: 1, z: 1}
+      delay: 4
+  - patternName: OLDHorizontal in-out
+    isActive: 0
+    bricks:
+    - position: {x: 0, y: 0, z: 0}
+      scale: {x: 7, y: 1, z: 1}
+      delay: 0.5
+    - position: {x: 0, y: 0, z: -1}
+      scale: {x: 7, y: 1, z: 1}
+      delay: 4
+    - position: {x: 0, y: 0, z: 1}
+      scale: {x: 7, y: 1, z: 1}
+      delay: 0
+    - position: {x: 0, y: 0, z: -2}
+      scale: {x: 7, y: 1, z: 1}
+      delay: 4
+    - position: {x: 0, y: 0, z: 2}
+      scale: {x: 5, y: 1, z: 1}
+      delay: 0
+  - patternName: Horizontal in-out
+    isActive: 1
+    bricks:
+    - position: {x: 3, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 1
+    - position: {x: 2, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -3, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -3, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 4
+    - position: {x: -3, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -2, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -1, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 0, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 1, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 2, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 3, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 3, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 4
+    - position: {x: 2, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 1, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 0, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -1, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -2, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -3, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+  - patternName: Horizontal out-in
+    isActive: 1
+    bricks:
+    - position: {x: 3, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.5
+    - position: {x: 2, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 1, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 0, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -1, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -2, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -3, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -3, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 4
+    - position: {x: -3, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -2, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -1, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 0, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 1, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 2, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 3, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 4
+    - position: {x: 3, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 4
+    - position: {x: 2, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -3, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+  - patternName: Horizontal back-front
+    isActive: 1
+    bricks:
+    - position: {x: 2, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.5
+    - position: {x: 1, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -3, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.6
+    - position: {x: -2, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.4
+    - position: {x: 2, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -3, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -3, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.4
+    - position: {x: -2, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.4
+    - position: {x: 2, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -3, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+  - patternName: Horizontal front-back
+    isActive: 1
+    bricks:
+    - position: {x: -3, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.5
+    - position: {x: -2, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.4
+    - position: {x: 2, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -3, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -3, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.4
+    - position: {x: -2, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.4
+    - position: {x: 2, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -3, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.4
+    - position: {x: -1, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+  - patternName: Vertical in-out
+    isActive: 1
+    bricks:
+    - position: {x: 0, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.5
+    - position: {x: 0, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.5
+    - position: {x: -1, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 1, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -1, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -1, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -1, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 2, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.5
+    - position: {x: -2, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -2, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 2, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 2, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 2, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -3, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.5
+    - position: {x: 3, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -3, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -3, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -3, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
       delay: 0
   - patternName: Vertical out-in
     isActive: 1
     bricks:
-    - position: {x: -3, y: 0, z: -0.6}
-      scale: {x: 1, y: 1, z: 4}
+    - position: {x: 3, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
       delay: 0.5
-    - position: {x: 3, y: 0, z: -0.6}
-      scale: {x: 1, y: 1, z: 4}
+    - position: {x: -3, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 3, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -3, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 3, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -3, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -3, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 2, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.6
+    - position: {x: -2, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
       delay: 0
     - position: {x: -2, y: 0, z: 0}
-      scale: {x: 1, y: 1, z: 5}
-      delay: 4
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
     - position: {x: 2, y: 0, z: 0}
-      scale: {x: 1, y: 1, z: 5}
+      scale: {x: 1, y: 1, z: 1}
       delay: 0
-    - position: {x: 1, y: 0, z: 0}
-      scale: {x: 1, y: 1, z: 5}
-      delay: 4
-    - position: {x: -1, y: 0, z: 0}
-      scale: {x: 1, y: 1, z: 5}
+    - position: {x: -2, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
       delay: 0
-    - position: {x: 0, y: 0, z: 0}
-      scale: {x: 1, y: 1, z: 5}
-      delay: 4
-  - patternName: Vertical right-left
-    isActive: 1
-    bricks:
-    - position: {x: -3, y: 0, z: -0.6}
-      scale: {x: 1, y: 1, z: 4}
-      delay: 0.5
-    - position: {x: -2, y: 0, z: 0}
-      scale: {x: 1, y: 1, z: 5}
-      delay: 3
+    - position: {x: -2, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 2, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 1, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.5
+    - position: {x: -1, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -1, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -1, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
     - position: {x: -1, y: 0, z: 0}
-      scale: {x: 1, y: 1, z: 5}
-      delay: 3
-    - position: {x: 0, y: 0, z: 0}
-      scale: {x: 1, y: 1, z: 5}
-      delay: 3
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
     - position: {x: 1, y: 0, z: 0}
-      scale: {x: 1, y: 1, z: 5}
-      delay: 3
-    - position: {x: 2, y: 0, z: 0}
-      scale: {x: 1, y: 1, z: 5}
-      delay: 3
-    - position: {x: 3, y: 0, z: -0.6}
-      scale: {x: 1, y: 1, z: 4}
-      delay: 3
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: -1, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0
+    - position: {x: 0, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.5
+    - position: {x: 0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
   - patternName: Vertical left-right
     isActive: 1
     bricks:
-    - position: {x: 3, y: 0, z: -0.6}
-      scale: {x: 1, y: 1, z: 4}
+    - position: {x: 3, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
       delay: 0.5
+    - position: {x: 3, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.6
     - position: {x: 2, y: 0, z: 0}
-      scale: {x: 1, y: 1, z: 5}
-      delay: 3
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.5
+    - position: {x: 1, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
     - position: {x: 1, y: 0, z: 0}
-      scale: {x: 1, y: 1, z: 5}
-      delay: 3
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.5
     - position: {x: 0, y: 0, z: 0}
-      scale: {x: 1, y: 1, z: 5}
-      delay: 3
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 0, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.5
+    - position: {x: -1, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
     - position: {x: -1, y: 0, z: 0}
-      scale: {x: 1, y: 1, z: 5}
-      delay: 3
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.5
     - position: {x: -2, y: 0, z: 0}
-      scale: {x: 1, y: 1, z: 5}
-      delay: 3
-    - position: {x: -3, y: 0, z: -0.6}
-      scale: {x: 1, y: 1, z: 4}
-      delay: 3
-  - patternName: Horizontal front-back
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -3, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.5
+    - position: {x: -3, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -3, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -3, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+  - patternName: Vertical right-left
     isActive: 1
     bricks:
-    - position: {x: 0, y: 0, z: -2}
-      scale: {x: 7, y: 1, z: 1}
+    - position: {x: -3, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
       delay: 0.5
-    - position: {x: 0, y: 0, z: -1}
-      scale: {x: 7, y: 1, z: 1}
-      delay: 4
-    - position: {x: 0, y: 0, z: 0}
-      scale: {x: 7, y: 1, z: 1}
-      delay: 4
+    - position: {x: -3, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -3, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -3, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.6
+    - position: {x: -2, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -2, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.5
+    - position: {x: -1, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: -1, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
     - position: {x: 0, y: 0, z: 1}
-      scale: {x: 7, y: 1, z: 1}
-      delay: 4
-    - position: {x: 0, y: 0, z: 2}
-      scale: {x: 5, y: 1, z: 1}
-      delay: 4
-  - patternName: Horizontal back-front
-    isActive: 1
-    bricks:
-    - position: {x: 0, y: 0, z: 2}
-      scale: {x: 5, y: 1, z: 1}
-      delay: 0.5
-    - position: {x: 0, y: 0, z: 1}
-      scale: {x: 7, y: 1, z: 1}
-      delay: 4
-    - position: {x: 0, y: 0, z: 0}
-      scale: {x: 7, y: 1, z: 1}
-      delay: 4
-    - position: {x: 0, y: 0, z: -1}
-      scale: {x: 7, y: 1, z: 1}
-      delay: 4
-    - position: {x: 0, y: 0, z: -2}
-      scale: {x: 7, y: 1, z: 1}
-      delay: 4
-  - patternName: Horizontal out-in
-    isActive: 1
-    bricks:
-    - position: {x: 0, y: 0, z: -2}
-      scale: {x: 7, y: 1, z: 1}
-      delay: 0.5
-    - position: {x: 0, y: 0, z: 2}
-      scale: {x: 5, y: 1, z: 1}
-      delay: 0
-    - position: {x: 0, y: 0, z: -1}
-      scale: {x: 7, y: 1, z: 1}
-      delay: 4
-    - position: {x: 0, y: 0, z: 1}
-      scale: {x: 7, y: 1, z: 1}
-      delay: 0
-    - position: {x: 0, y: 0, z: 0}
-      scale: {x: 7, y: 1, z: 1}
-      delay: 4
-  - patternName: Horizontal in-out
-    isActive: 1
-    bricks:
-    - position: {x: 0, y: 0, z: 0}
-      scale: {x: 7, y: 1, z: 1}
-      delay: 0.5
-    - position: {x: 0, y: 0, z: -1}
-      scale: {x: 7, y: 1, z: 1}
-      delay: 4
-    - position: {x: 0, y: 0, z: 1}
-      scale: {x: 7, y: 1, z: 1}
-      delay: 0
-    - position: {x: 0, y: 0, z: -2}
-      scale: {x: 7, y: 1, z: 1}
-      delay: 4
-    - position: {x: 0, y: 0, z: 2}
-      scale: {x: 5, y: 1, z: 1}
-      delay: 0
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.5
+    - position: {x: 2, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.5
+    - position: {x: 1, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 1, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: 1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.5
+    - position: {x: 2, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 2, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: -3}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 3.5
+    - position: {x: 3, y: 0, z: -2}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: -1}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1
+    - position: {x: 3, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      delay: 0.1

@@ -13,6 +13,7 @@ public class EnemyShip : MonoBehaviour
     public float fireSpeed = 10f;
     public MultiRendererOutline warningOutline;
     public AudioSource audioSource;
+    public float elapsed = 0f;
 
     public AudioClip deathSound;
     public AudioClip sinkSound;
@@ -33,6 +34,14 @@ public class EnemyShip : MonoBehaviour
         //Debug.Log("This ship will spawn in lane " + lane);
         //StartCoroutine(EnemyFireCoroutine());  <- OLD METHOD. UNCOMMENT TO USE OLD CANNONBALL SYSTEM
         StartCoroutine(StartLightCoroutine());
+        if (lane == 3)
+        {
+            transform.rotation = Quaternion.Euler(0f, 128f, 0f);
+        }
+        if(lane == 1)
+        {
+            transform.rotation = Quaternion.Euler(0f, 52f, 0f);
+        }
     }
 
     private IEnumerator StartLightCoroutine()
@@ -58,7 +67,8 @@ public class EnemyShip : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        
+        elapsed += Time.deltaTime;
+        Debug.Log(elapsed);
     }
 
     void FixedUpdate(   )
@@ -73,7 +83,7 @@ public class EnemyShip : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("ENemey ship hit something");
+        Debug.Log("ENemey ship hit something");
         PlayerShip playership = other.GetComponent<PlayerShip>();
         if (playership != null)
         {
@@ -85,11 +95,23 @@ public class EnemyShip : MonoBehaviour
         }
 
         PlayerCannonBall cannonBall = other.GetComponent<PlayerCannonBall>();
-        if(cannonBall != null)
+        if (cannonBall != null)
         {
             //audioSource.PlayOneShot(deathSound);
             //audioSource.PlayOneShot(sinkSound);
-
+            GameManager.Instance.UpCounter();
+            if (elapsed < 10)
+            {
+                GameManager.Instance.AddPoints(100);
+            }
+            else if (elapsed > 10 && elapsed < 15)
+            {
+                GameManager.Instance.AddPoints(50);
+            }
+            else
+            {
+                GameManager.Instance.AddPoints(20);
+            }
             if (deathSound != null)
             {
                 AudioSource.PlayClipAtPoint(deathSound, transform.position);

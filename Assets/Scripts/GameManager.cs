@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     public GameObject Ammo;
     private Vector3 spawnPos;
 
+    public int points = 0;
+    public int numDead = 0;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -58,7 +61,14 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(10);
         StartCoroutine(SpawnAShip());
     }
-
+    public void AddPoints(int x)
+    {
+        points += x;
+    }
+    public void UpCounter()
+    {
+        numDead += 1;
+    }
     public void ShiftLane1()
     {
         if (lane1s.Count > 0)
