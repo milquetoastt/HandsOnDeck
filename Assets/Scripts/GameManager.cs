@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,8 +21,12 @@ public class GameManager : MonoBehaviour
     public GameObject Ammo;
     private Vector3 spawnPos;
 
+    public string nameFile;
+
     public int points = 0;
     public int numDead = 0;
+
+    private int maxPoints;
 
     // Start is called before the first frame update
     void Awake()
@@ -32,6 +37,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        maxPoints = int.Parse(HandleText.ReadString(nameFile));
         ResetPatternPool();
         StartCoroutine(PatternDropLoop());
         StartCoroutine(SpawnAShip());
@@ -64,6 +70,7 @@ public class GameManager : MonoBehaviour
     public void AddPoints(int x)
     {
         points += x;
+        CheckPoints();//need to move to when you win put it here for now
     }
     public void UpCounter()
     {
@@ -144,5 +151,15 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(10);
         StartCoroutine(SpawnAmmo());
     }
+
+    public void CheckPoints()
+    {
+        if (points>maxPoints)
+        {
+            HandleText.WriteString(nameFile, points.ToString());
+        }
+    }
+
+
 
 }

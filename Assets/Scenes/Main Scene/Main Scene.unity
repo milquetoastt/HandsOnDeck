@@ -1457,6 +1457,7 @@ MonoBehaviour:
   brickSpawner: {fileID: 1368909274}
   patternInterval: 25
   Ammo: {fileID: 1410693692253306331, guid: 7f03aa7b2cb17534b9baa375ff1d1450, type: 3}
+  nameFile: Score
   points: 0
   numDead: 0
 --- !u!4 &602659313
