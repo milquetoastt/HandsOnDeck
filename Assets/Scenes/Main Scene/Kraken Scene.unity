@@ -1450,7 +1450,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb6d8c63ba29d1f4dbdb7c8f5b1eec77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyShipPrefab: {fileID: 3992203497840435111, guid: 5be00af7f2166e54187c85dccf08241e, type: 3}
+  enemyShipPrefabOPT1: {fileID: 3992203497840435111, guid: 5be00af7f2166e54187c85dccf08241e, type: 3}
+  enemyShipPrefabOPT2: {fileID: 3992203497840435111, guid: de27caf1cae485345b8a69f82a148ab6, type: 3}
+  enemyShipPrefabOPT3: {fileID: 3992203497840435111, guid: a4feeea73044f8c4189e29f92855b7b8, type: 3}
   lane1s: []
   lane2s: []
   lane3s: []

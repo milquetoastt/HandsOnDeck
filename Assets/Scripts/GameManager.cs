@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject enemyShipPrefabOPT1;
     public GameObject enemyShipPrefabOPT2;
+    public GameObject enemyShipPrefabOPT3;
 
     public List<GameObject> lane1s;
     public List<GameObject> lane2s;
@@ -49,19 +50,23 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator SpawnAShip()
     {
-        int i = Random.Range(1, 3);
+        int i = Random.Range(1, 4);
         GameObject instance;
         if (i == 1)
         {
             instance = Instantiate(enemyShipPrefabOPT1);
         }
-        else
+        else if (i == 2)
         {
             instance = Instantiate(enemyShipPrefabOPT2);
         }
-            
+        else
+        {
+            instance = Instantiate(enemyShipPrefabOPT3);
+        }
 
-        EnemyShip enemyShip = instance.GetComponent<EnemyShip>();
+
+            EnemyShip enemyShip = instance.GetComponent<EnemyShip>();
         int lane = enemyShip.lane;
         //Debug.Log("New ship spawned in lane " + lane);
         if (lane == 1)
