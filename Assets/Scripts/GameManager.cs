@@ -7,7 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public GameObject enemyShipPrefab;
+    public GameObject enemyShipPrefabOPT1;
+    public GameObject enemyShipPrefabOPT2;
+    public GameObject enemyShipPrefabOPT3;
 
     public List<GameObject> lane1s;
     public List<GameObject> lane2s;
@@ -35,6 +37,14 @@ public class GameManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
+    private void Update()
+    {
+        if (numDead == 20)
+        {
+            Debug.Log("Trigger 'YouWin!' here");
+        }
+    }
+
     void Start()
     {
         maxPoints = int.Parse(HandleText.ReadString(nameFile));
@@ -46,9 +56,23 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator SpawnAShip()
     {
+        int i = Random.Range(1, 4);
+        GameObject instance;
+        if (i == 1)
+        {
+            instance = Instantiate(enemyShipPrefabOPT1);
+        }
+        else if (i == 2)
+        {
+            instance = Instantiate(enemyShipPrefabOPT2);
+        }
+        else
+        {
+            instance = Instantiate(enemyShipPrefabOPT3);
+        }
 
-        GameObject instance = Instantiate(enemyShipPrefab);
-        EnemyShip enemyShip = instance.GetComponent<EnemyShip>();
+
+            EnemyShip enemyShip = instance.GetComponent<EnemyShip>();
         int lane = enemyShip.lane;
         //Debug.Log("New ship spawned in lane " + lane);
         if (lane == 1)
