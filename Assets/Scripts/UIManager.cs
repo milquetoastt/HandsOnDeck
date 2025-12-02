@@ -74,10 +74,7 @@ public class UIManager : MonoBehaviour
             AmmoCounter.SetActive(false);
             Time.timeScale = 0;
 
-            for (int x = 0; x < 10; x++)
-            {
-                heart[x].SetActive(false);
-            }
+            GameObject.Find("Ship Health").SetActive(false);
 
            
         }else if (Input.GetKeyDown(KeyCode.Space) && loseScreen.activeInHierarchy == true)

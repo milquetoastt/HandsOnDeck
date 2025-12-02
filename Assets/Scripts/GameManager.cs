@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public int numDead = 0;
 
     private int maxPoints;
+    private GameObject scoreText;
 
     // Start is called before the first frame update
     void Awake()
@@ -95,6 +96,7 @@ public class GameManager : MonoBehaviour
     {
         points += x;
         CheckPoints();//need to move to when you win put it here for now
+        updateTextScore();
     }
     public void UpCounter()
     {
@@ -185,5 +187,9 @@ public class GameManager : MonoBehaviour
     }
 
 
-
+    public void updateTextScore()
+    {
+        scoreText = GameObject.Find("SCORE");
+        scoreText.GetComponent<ScoreChecker>().updateScore(points);
+    }
 }
