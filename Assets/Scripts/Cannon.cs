@@ -76,4 +76,9 @@ public class Cannon : MonoBehaviour
 
     public void UpdateAmmo(){uiManager.UpdateAmmoUI(currentAmmo, maxAmmo);}
 
+    public void updatePlayerIcon(string name, bool near)
+    {
+        uiManager.playerIconStatus(name, near, 0);
+    }
+
 }

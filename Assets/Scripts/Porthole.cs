@@ -13,6 +13,7 @@ public class Porthole : MonoBehaviour
 
     public bool cannonReady;
     public bool playerReady;
+    private UIManager uiManager;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class Porthole : MonoBehaviour
 
         cannonAimer = realCannon.GetComponent<CannonAimer>();
         cannonAimer.numLane = 0;
+
     }
     //every porthole is checking for their own colliders
 
@@ -42,8 +44,7 @@ public class Porthole : MonoBehaviour
         {
             CheckIfCanFire(realCannon);
         }
-
-    
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -63,11 +64,33 @@ public class Porthole : MonoBehaviour
             if (player.alive == true)
             {
                 playerReady = true;
+                realCannon.updatePlayerIcon(player.name, realCannon.canFire);
+            }
+            else if (player.alive == false)
+            {
+                realCannon.updatePlayerIcon(player.name, false);
+
             }
         }
-       
     }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Player player = other.GetComponent<Player>();
 
+            if (player.alive == true)
+            {
+                playerReady = true;
+                realCannon.updatePlayerIcon(player.name, realCannon.canFire);
+            }
+            else if (player.alive == false)
+            {
+                realCannon.updatePlayerIcon(player.name, false);
+
+            }
+        }
+    }
     private void OnTriggerExit(Collider other)
     {
         Cannon cannon = other.GetComponent<Cannon>();
@@ -79,6 +102,7 @@ public class Porthole : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerReady = false;
+            realCannon.updatePlayerIcon(player.name, false);
         }
 
         cannonAimer.numLane = 0;
@@ -89,6 +113,7 @@ public class Porthole : MonoBehaviour
         if (playerReady && isTracked)
         {
             cannon.canFire = true;
+
         }
         else                                       
         {

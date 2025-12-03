@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     private Camera mainCamera;
     public GameObject[] heart = new GameObject[10];
     public GameObject[] ammoUI = new GameObject[5];
+
     public PlayerShip deck;
     public Cannon cannon;
     int numHearts;
@@ -19,9 +20,16 @@ public class UIManager : MonoBehaviour
 
     public GameObject loseScreen;
 
+    //old ammo counter
     public GameObject AmmoCounter;
     public TMP_Text maxAmmoText;
     public TMP_Text currentAmmoText;
+
+    //player icons
+    public Sprite player1;
+    public Sprite player2;
+    private Sprite setSprite;
+    public GameObject[] playerIcon = new GameObject[2];
 
     //cannon aimer
     public GameObject crossHairUI;
@@ -47,11 +55,15 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+
         cannon = GameObject.FindWithTag("Cannon").GetComponent<Cannon>();
-        maxAmmoText.text = cannon.GetMaxAmmo().ToString();
+        maxAmmoText.text = cannon.GetMaxAmmo().ToString();//old ammo counter
+
         crossHairRectTransform = crossHairUI.GetComponent<Image>().rectTransform;
         canvasRectTransform = GetComponent<RectTransform>();
         levelLoader = GameObject.Find("SceneLoader").GetComponent<LevelLoader>();
+        playerIcon[0].SetActive(false);
+        playerIcon[1].SetActive(false);
 
         CalculateBounds();
     }
@@ -164,10 +176,27 @@ public class UIManager : MonoBehaviour
 
     }
 
-    void playerIconStatus()
+    public void playerIconStatus(string playerName, bool display, int type)
     {
         //replace the cannon and barrel icos in the image
         //
+        if (display)
+        {
+            if (playerName == "Player2")
+            {
+                setSprite = player2;
+            }
+            else if (playerName == "Player")
+            {
+                setSprite = player1;
+            }
+            playerIcon[type].GetComponent<Image>().sprite = setSprite;
+            playerIcon[type].SetActive(true);
+        }
+        else if(!display)
+        {
+            playerIcon[type].SetActive(false);
+        }
     }
 
     private void LoadLevelAgain()

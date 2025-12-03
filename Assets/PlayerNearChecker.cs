@@ -6,11 +6,13 @@ public class PlayerNearChecker : MonoBehaviour
 {
     bool playerNear = false;
     Cannon cannon;
+    private UIManager uiManager;
 
      void Start()
      {
         cannon = GameObject.Find("Cannon").GetComponent<Cannon>();
-     }
+        uiManager = GameObject.Find("Canvas (1)").GetComponent<UIManager>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -20,7 +22,31 @@ public class PlayerNearChecker : MonoBehaviour
             if (player.alive == true && cannon.GetCurrentAmmo() > 0)
             {
                 playerNear = true;
-                updatePlayerIcon(player.name, true);  
+                updatePlayerIcon(player.name, true);
+            }
+            else if (player.alive == false)
+            {
+                updatePlayerIcon(player.name, false);
+
+            }
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Player player = other.GetComponent<Player>();
+
+            if (player.alive == true && cannon.GetCurrentAmmo() > 0)
+            {
+                playerNear = true;
+                updatePlayerIcon(player.name, true);
+            }
+            else if (player.alive == false)
+            {
+                updatePlayerIcon(player.name, false);
+
             }
         }
     }
@@ -41,7 +67,6 @@ public class PlayerNearChecker : MonoBehaviour
 
     public void updatePlayerIcon(string name,bool near)
     {
-
-        //give canvas the player that is in the button and wether they are ner or not
+        uiManager.playerIconStatus(name, near, 1);
     }
 }

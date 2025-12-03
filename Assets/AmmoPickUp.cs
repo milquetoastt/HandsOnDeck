@@ -18,10 +18,10 @@ public class AmmoPickUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        var player = collision.GetComponent<Player>();
-        if (collision.CompareTag("Player") && player.alive)
+        if (collision.CompareTag("Player"))
         {
-            if (cannon.AddAmmo(addAmmo))
+            var player = collision.GetComponent<Player>();
+            if (cannon.AddAmmo(addAmmo) && player.alive)
             {
                 if (ammoPickUpSound != null)
                 {
