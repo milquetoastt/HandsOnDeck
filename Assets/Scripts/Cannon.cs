@@ -18,11 +18,15 @@ public class Cannon : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip shootCannon;
+
+    private UIManager uiManager;
     // Start is called before the first frame update
     void Start()
     {
         //lockedRotX = transform.rotation.eulerAngles.x;
         //lockedRotZ = transform.rotation.eulerAngles.z;
+        uiManager = GameObject.Find("Canvas (1)").GetComponent<UIManager>();
+        UpdateAmmo();
     }
     void LateUpdate()
     {
@@ -50,6 +54,7 @@ public class Cannon : MonoBehaviour
             // Directly set initial velocity instead of AddRelativeForce
             rb.velocity = firepoint.TransformDirection(Vector3.right * launchVelocity);
             currentAmmo--;
+            UpdateAmmo();
         }
     }
 
@@ -59,12 +64,16 @@ public class Cannon : MonoBehaviour
         {
             currentAmmo+=pickUpAmmo;
             if (currentAmmo >= maxAmmo){currentAmmo = maxAmmo;}
+            UpdateAmmo();
             return true;
+            
         }
             return false;
     }
 
     public int GetCurrentAmmo(){return currentAmmo;}
     public int GetMaxAmmo(){return maxAmmo; }
+
+    public void UpdateAmmo(){uiManager.UpdateAmmoUI(currentAmmo, maxAmmo);}
 
 }

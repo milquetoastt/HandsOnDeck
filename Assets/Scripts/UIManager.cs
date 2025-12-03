@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     //List<GameObject> heart = new List<GameObject>();
     private Camera mainCamera;
     public GameObject[] heart = new GameObject[10];
+    public GameObject[] ammoUI = new GameObject[5];
     public PlayerShip deck;
     public Cannon cannon;
     int numHearts;
@@ -83,7 +84,7 @@ public class UIManager : MonoBehaviour
                 LoadLevelAgain();
         }
 
-        currentAmmoText.text = cannon.GetCurrentAmmo().ToString();
+        //currentAmmoText.text = cannon.GetCurrentAmmo().ToString();//part of old ammo counter, use for testing
     }
 
 
@@ -137,6 +138,36 @@ public class UIManager : MonoBehaviour
         maxX = (canvasWidth / 2) - (imageWidth / 2);
         minY = -(canvasHeight / 2) + (imageHeight / 2);
         maxY = (canvasHeight / 2) - (imageHeight / 2);
+    }
+
+    public void UpdateAmmoUI(int ammo, int maxAmmo)
+    {
+        if (ammo == maxAmmo)
+        {
+            for (int x = 0; x < ammo; x++)
+            {
+                ammoUI[x].SetActive(true);
+            }
+        }
+        else if (ammo < maxAmmo)
+        {
+            for (int x = 0; x < ammo; x++)
+            {
+                ammoUI[x].SetActive(true);
+            }
+
+            for (int x = ammo; x < maxAmmo; x++)
+            {
+                ammoUI[x].SetActive(false);
+            }
+        }
+
+    }
+
+    void playerIconStatus()
+    {
+        //replace the cannon and barrel icos in the image
+        //
     }
 
     private void LoadLevelAgain()
