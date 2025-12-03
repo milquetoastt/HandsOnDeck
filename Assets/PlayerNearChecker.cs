@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerNearChecker : MonoBehaviour
 {
-    bool playerNear = false;
     Cannon cannon;
     private UIManager uiManager;
 
@@ -21,7 +20,7 @@ public class PlayerNearChecker : MonoBehaviour
 
             if (player.alive == true && cannon.GetCurrentAmmo() > 0)
             {
-                playerNear = true;
+                
                 updatePlayerIcon(player.name, true);
             }
             else if (player.alive == false)
@@ -40,7 +39,7 @@ public class PlayerNearChecker : MonoBehaviour
 
             if (player.alive == true && cannon.GetCurrentAmmo() > 0)
             {
-                playerNear = true;
+                
                 updatePlayerIcon(player.name, true);
             }
             else if (player.alive == false)
@@ -59,7 +58,7 @@ public class PlayerNearChecker : MonoBehaviour
 
             if (player.alive == true )
             {
-                playerNear = false;
+                
                 updatePlayerIcon(player.name, false);
             }
         }

@@ -76,7 +76,7 @@ public class UIManager : MonoBehaviour
             
         }
         numHearts = deck.GetHealth() / 10;
-        if (numHearts < 10)
+        if (numHearts < 10 && numHearts >= 0)
         {
             heart[numHearts].GetComponent<Image>().sprite = emptyHeart;
         }

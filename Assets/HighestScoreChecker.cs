@@ -12,10 +12,13 @@ public class HighestScoreChecker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*
         if (HandleText.ReadString(nameFile)==null)
         {
             HandleText.WriteString(nameFile, "0");
         }
+        */
+        HandleText.ReadOrCreateString(nameFile);
 
         highscoretext = GetComponent<TMP_Text>();
         highestScore = HandleText.ReadString(nameFile);

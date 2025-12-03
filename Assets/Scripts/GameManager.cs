@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+
     }
 
     private void Update()
@@ -48,7 +49,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        maxPoints = int.Parse(HandleText.ReadString(nameFile));
+        maxPoints = int.Parse(HandleText.ReadOrCreateString(nameFile));
         ResetPatternPool();
         StartCoroutine(PatternDropLoop());
         StartCoroutine(SpawnAShip());
