@@ -87,7 +87,8 @@ public class Porthole : MonoBehaviour
             else if (player.alive == false)
             {
                 realCannon.updatePlayerIcon(player.name, false);
-
+                realCannon.canFire = false;//forced 
+                playerReady = false;
             }
         }
     }
