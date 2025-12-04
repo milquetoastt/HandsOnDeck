@@ -84,7 +84,7 @@ public class Porthole : MonoBehaviour
                 playerReady = true;
                 realCannon.updatePlayerIcon(player.name, realCannon.canFire);
             }
-            else if (player.alive == false)
+            if (player.alive == false || realCannon.GetCurrentAmmo() <= 0)
             {
                 realCannon.updatePlayerIcon(player.name, false);
                 realCannon.canFire = false;//forced 

@@ -10,7 +10,13 @@ public class PlayerNearChecker : MonoBehaviour
      void Start()
      {
         cannon = GameObject.Find("Cannon").GetComponent<Cannon>();
+
         uiManager = GameObject.Find("Canvas (1)").GetComponent<UIManager>();
+        if (uiManager == null)
+        {
+            Debug.Log("not found UI manager");
+        }
+        
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -22,10 +28,12 @@ public class PlayerNearChecker : MonoBehaviour
             {
                 
                 updatePlayerIcon(player.name, true);
+                cannon.playerNear = true;
             }
             else if (player.alive == false)
             {
                 updatePlayerIcon(player.name, false);
+                cannon.playerNear = false;
 
             }
         }
@@ -41,10 +49,13 @@ public class PlayerNearChecker : MonoBehaviour
             {
                 
                 updatePlayerIcon(player.name, true);
+                cannon.playerNear = true;
+
             }
-            else if (player.alive == false)
+            else if (player.alive == false || cannon.GetCurrentAmmo() <= 0)
             {
                 updatePlayerIcon(player.name, false);
+                cannon.playerNear = false;
 
             }
         }
@@ -58,7 +69,7 @@ public class PlayerNearChecker : MonoBehaviour
 
             if (player.alive == true )
             {
-                
+                cannon.playerNear = false;
                 updatePlayerIcon(player.name, false);
             }
         }

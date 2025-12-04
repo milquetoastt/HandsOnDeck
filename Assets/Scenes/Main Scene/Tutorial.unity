@@ -3157,7 +3157,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3960979794709322597, guid: e58dff187351a1047800014d05d5d6dd, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: Canvas (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4978444297262494506, guid: e58dff187351a1047800014d05d5d6dd, type: 3}
       propertyPath: deck

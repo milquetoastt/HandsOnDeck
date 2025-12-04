@@ -18,6 +18,7 @@ public class Cannon : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip shootCannon;
+    public bool playerNear;
 
     private UIManager uiManager;
     // Start is called before the first frame update
@@ -42,7 +43,7 @@ public class Cannon : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && canFire && currentAmmo!=0)
+        if (Input.GetKeyDown(KeyCode.Space) && canFire && currentAmmo!=0 && playerNear == true)
         {
             Instantiate(explosionPrefab, firePoint.transform.position, firePoint.transform.rotation);
             AudioSource.PlayClipAtPoint(shootCannon, transform.position);
