@@ -990,7 +990,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb6d8c63ba29d1f4dbdb7c8f5b1eec77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyShipPrefab: {fileID: 0}
+  enemyShipPrefabOPT1: {fileID: 0}
+  enemyShipPrefabOPT2: {fileID: 0}
+  enemyShipPrefabOPT3: {fileID: 0}
   lane1s:
   - {fileID: 1567510461}
   lane2s:
@@ -2559,6 +2561,11 @@ Transform:
   - {fileID: 677401957}
   m_Father: {fileID: 1305901557}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1778143004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6599021642288898485, guid: e58dff187351a1047800014d05d5d6dd, type: 3}
+  m_PrefabInstance: {fileID: 6074235690558023844}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1809026095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2879,7 +2886,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 775835865472450613, guid: d5d3259bca493cc41b1c466355553697, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.109999895
+      value: 2.04
       objectReference: {fileID: 0}
     - target: {fileID: 775835865472450613, guid: d5d3259bca493cc41b1c466355553697, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3060,6 +3067,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 391831811974733738, guid: e58dff187351a1047800014d05d5d6dd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1496304728007036603, guid: e58dff187351a1047800014d05d5d6dd, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3152,6 +3163,10 @@ PrefabInstance:
       propertyPath: deck
       value: 
       objectReference: {fileID: 1073429213}
+    - target: {fileID: 4978444297262494506, guid: e58dff187351a1047800014d05d5d6dd, type: 3}
+      propertyPath: winScreen
+      value: 
+      objectReference: {fileID: 1778143004}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3334,7 +3349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1737921418996292640, guid: 9cde8a8cf551d424fad504a442cf3f4b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.75
+      value: -2.6787
       objectReference: {fileID: 0}
     - target: {fileID: 1737921418996292640, guid: 9cde8a8cf551d424fad504a442cf3f4b, type: 3}
       propertyPath: m_LocalRotation.w

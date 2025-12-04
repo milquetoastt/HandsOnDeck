@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
     public Sprite emptyHeart;
 
     public GameObject loseScreen;
+    public GameObject winScreen;
 
     //old ammo counter
     public GameObject AmmoCounter;
@@ -95,7 +96,21 @@ public class UIManager : MonoBehaviour
                 Time.timeScale = 1;
                 LoadLevelAgain();
         }
+        if (GameManager.Instance.numDead >= 20 && winScreen.activeInHierarchy == false)
+        {
+            winScreen.SetActive(true);
+            AmmoCounter.SetActive(false);
+            Time.timeScale = 0;
 
+            GameObject.Find("Ship Health").SetActive(false);
+
+
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) && winScreen.activeInHierarchy == true)
+        {
+            Time.timeScale = 1;
+            LoadLevelAgain();
+        }
         //currentAmmoText.text = cannon.GetCurrentAmmo().ToString();//part of old ammo counter, use for testing
     }
 

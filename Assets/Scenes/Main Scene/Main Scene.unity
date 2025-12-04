@@ -2234,6 +2234,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4639250703892709139, guid: e58dff187351a1047800014d05d5d6dd, type: 3}
+      propertyPath: m_text
+      value: You won!
+      objectReference: {fileID: 0}
     - target: {fileID: 4978444297262494506, guid: e58dff187351a1047800014d05d5d6dd, type: 3}
       propertyPath: deck
       value: 
@@ -2242,6 +2246,10 @@ PrefabInstance:
       propertyPath: cannon
       value: 
       objectReference: {fileID: 1582246693}
+    - target: {fileID: 4978444297262494506, guid: e58dff187351a1047800014d05d5d6dd, type: 3}
+      propertyPath: winScreen
+      value: 
+      objectReference: {fileID: 1998308848}
     - target: {fileID: 9130670573673018023, guid: e58dff187351a1047800014d05d5d6dd, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3663,6 +3671,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64269c82a76f4d3418894089a7ea3390, type: 3}
+--- !u!1 &1998308848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6599021642288898485, guid: e58dff187351a1047800014d05d5d6dd, type: 3}
+  m_PrefabInstance: {fileID: 1101495123}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2030744204
 GameObject:
   m_ObjectHideFlags: 0
@@ -3892,7 +3905,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 775835865472450613, guid: d5d3259bca493cc41b1c466355553697, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.109999895
+      value: 2.04
       objectReference: {fileID: 0}
     - target: {fileID: 775835865472450613, guid: d5d3259bca493cc41b1c466355553697, type: 3}
       propertyPath: m_LocalRotation.w
