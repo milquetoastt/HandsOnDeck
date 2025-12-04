@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
     public Sprite emptyHeart;
 
     public GameObject loseScreen;
+    public GameObject winScreen;
 
     public GameObject AmmoCounter;
     public TMP_Text maxAmmoText;
@@ -84,6 +85,24 @@ public class UIManager : MonoBehaviour
         {
                 Time.timeScale = 1;
                 LoadLevelAgain();
+        }
+
+        if (GameManager.Instance.numDead >= 20 && winScreen.activeInHierarchy == false)
+        {
+            winScreen.SetActive(true);
+            AmmoCounter.SetActive(false);
+            Time.timeScale = 0;
+
+            for (int x = 0; x < 10; x++)
+            {
+                heart[x].SetActive(false);
+            }
+
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) && winScreen.activeInHierarchy == true)
+        {
+            Time.timeScale = 1;
+            LoadLevelAgain();
         }
 
         currentAmmoText.text = cannon.GetCurrentAmmo().ToString();

@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        maxPoints = int.Parse(HandleText.ReadString(nameFile));
+        //maxPoints = int.Parse(HandleText.ReadString(nameFile));
         ResetPatternPool();
         StartCoroutine(PatternDropLoop());
         StartCoroutine(SpawnAShip());
