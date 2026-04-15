@@ -41,10 +41,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (numDead == 20)
-        {
-            Debug.Log("Trigger 'YouWin!' here");
-        }
+        
     }
 
     void Start()

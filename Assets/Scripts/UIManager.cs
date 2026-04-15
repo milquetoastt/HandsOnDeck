@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
     public PlayerShip deck;
     public Cannon cannon;
     int numHearts;
+    public int numNeededToWin = 10;
 
     public Sprite emptyHeart;
 
@@ -96,15 +97,13 @@ public class UIManager : MonoBehaviour
                 Time.timeScale = 1;
                 LoadLevelAgain();
         }
-        if (GameManager.Instance.numDead >= 20 && winScreen.activeInHierarchy == false)
+        if (GameManager.Instance.numDead >= numNeededToWin && winScreen.activeInHierarchy == false)
         {
             winScreen.SetActive(true);
             AmmoCounter.SetActive(false);
             Time.timeScale = 0;
 
             GameObject.Find("Ship Health").SetActive(false);
-
-
         }
         else if (Input.GetKeyDown(KeyCode.Space) && winScreen.activeInHierarchy == true)
         {
